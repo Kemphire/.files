@@ -4,6 +4,11 @@ return {
 		config = function()
 			require("mason").setup()
 		end,
+		opts = {
+			ensure_installed = {
+				"clang-format",
+			}
+		}
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
@@ -16,7 +21,7 @@ return {
 					"clangd",
 					"html",
 					"emmet_language_server",
-					"cssls"
+					"cssls",
 				},
 				auto_install = true,
 			})
