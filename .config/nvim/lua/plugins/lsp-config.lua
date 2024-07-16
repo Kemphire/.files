@@ -17,8 +17,8 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"quick_lint_js",
-					"pyright",
 					"clangd",
+					"pyright",
 					"html",
 					"emmet_language_server",
 					"cssls",
