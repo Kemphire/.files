@@ -12,6 +12,9 @@ set -gx CPPFLAGS "-I/home/linuxbrew/.linuxbrew/opt/postgresql@16/include"
 
 set -gx PKG_CONFIG_PATH "/home/linuxbrew/.linuxbrew/opt/postgresql@16/lib/pkgconfig"
 
+function fish_default_key_bindings
+	fish_vi_key_bindings
+end
  
 function ls
 	eza -la $argv
