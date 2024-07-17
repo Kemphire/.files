@@ -14,3 +14,4 @@ vim.cmd("set path+=**")
 vim.cmd("set wildmenu")
 vim.opt.ignorecase = true
 vim.keymap.set('c', '<tab>', '<C-z>', { silent = false })
+vim.cmd("set nohlsearch")
