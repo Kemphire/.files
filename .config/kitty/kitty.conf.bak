@@ -969,7 +969,7 @@ underline_hyperlinks hover
 
 #: Tab bar {{{
 
-tab_bar_edge top
+# tab_bar_edge bottom
 
 #: The edge to show the tab bar on, top or bottom.
 
@@ -1314,7 +1314,7 @@ tab_bar_edge top
 #: interactive mode and reads its startup rc files. Environment
 #: variables are expanded in this setting.
 
-editor .
+# editor .
 
 #: The terminal based text editor (such as vim or nano) to use when
 #: editing the kitty config file or similar tasks.
@@ -2515,6 +2515,6 @@ background_opacity 0.3
 
 
 # BEGIN_KITTY_THEME
-# 1984 Orwellian
+# Catppuccin-Mocha
 include current-theme.conf
 # END_KITTY_THEME

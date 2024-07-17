@@ -220,8 +220,12 @@ bindsym $mod+r mode "resizer
 # to take screenshots
 
 bindsym $mod+shift+s exec "$HOME/Scripts/screenshots.sh"
+# for wallpaper management
+bindsym $mod+shift+w exec "$HOME/Scripts/random_wallpaper.sh"
+bindsym $mod+shift+r exec "$HOME/Scripts/wallpaper_switcher_using_wofi.sh""
 
-gaps outer 12
+
+gaps outer 5
 
 include /etc/sway/config.d/*.conf
 include ~/.config/sway/config.d/*

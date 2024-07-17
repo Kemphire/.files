@@ -12,11 +12,12 @@ return {
 			terminaColors = true,
 			commentStyle = { italic = true },
 		})
-		if Time_in_hour() > 7 and Time_in_hour() < 19 then
-			vim.cmd("colorscheme kanagawa-wave")
-		else
-			vim.cmd("colorscheme kanagawa-dragon")
-		end
-
+		-- will configure it later
+		-- if Time_in_hour() > 7 and Time_in_hour() < 19 then
+		-- 	vim.cmd("colorscheme kanagawa-wave")
+		-- else
+		-- 	vim.cmd("colorscheme kanagawa-dragon")
+		-- end
+		--
 	end,
 }
