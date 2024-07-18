@@ -18,14 +18,14 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu exec wofi --show drun --allow-images --insensitive 
+set $menu exec wofi 
 # it is set in config.d/50-openSUSE.conf
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /usr/share/backgrounds/wallpaper_custom/wallpaper_typecraft.png fill
+# output * bg /usr/share/backgrounds/wallpaper_custom/wallpaper_typecraft.png fill
 #
 # Example configuration:
 #
@@ -222,8 +222,20 @@ bindsym $mod+r mode "resizer
 bindsym $mod+shift+s exec "$HOME/Scripts/screenshots.sh"
 # for wallpaper management
 bindsym $mod+shift+w exec "$HOME/Scripts/random_wallpaper.sh"
-bindsym $mod+shift+r exec "$HOME/Scripts/wallpaper_switcher_using_wofi.sh""
+bindsym $mod+shift+r exec "$HOME/Scripts/wallpaper_switcher_using_wofi.sh"
 
+# to start swww daemon on startup
+
+exec_always --no-startup-id "$HOME/Scripts/random_wallpaper.sh"
+
+# to start apps on startup
+
+exec_always --no-startup-id firefox
+for_window [app_id="firefox$"] move workspace 2
+
+# open terminal in scratchpad
+
+exec_always --no-startup-id "~/Scripts/start_foot_scratchpad.sh"
 
 gaps outer 5
 
