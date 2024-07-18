@@ -1,8 +1,6 @@
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.cmd("set number")
-vim.cmd("set relativenumber")
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 vim.g.mapleader = " "
 
 -- for quitting terminal mode easily

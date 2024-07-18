@@ -3,3 +3,5 @@ allow_images=true
 image_size=64
 width=40%
 insensitivity=true
+prompt=Explore Me
+term=foot
