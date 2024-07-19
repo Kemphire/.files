@@ -20,7 +20,7 @@
         "network",
         "memory",
         "temperature",
-        "sway/language",
+				"backlight",
         "battery",
         "clock",
         "tray",

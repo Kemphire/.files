@@ -4,7 +4,7 @@
     "source": "~/.config/fastfetch/pokeball.png",
     "type": "kitty-direct",
     "height": 18,
-    "width": 35,
+    "width": 30,
     "padding": {
       "top": 3,
       "left": 3,

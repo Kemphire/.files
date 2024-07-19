@@ -1,9 +1,12 @@
 #!/bin/bash
-# Open Firefox
-firefox &
 
-# Wait for Firefox to start
-sleep 2
+# open flatpak firefox
 
-# Move Firefox to workspace 2
-wmctrl -r "Mozilla Firefox" -t 1
+vivaldi
+
+# wait for 0.25s
+
+sleep 0.25
+
+# open firefox in workspace 2
+swaymsg for_window [app_id="vivaldi-stable"] move container to workspace number 2

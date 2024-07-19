@@ -16,8 +16,9 @@ return {
 		-- if Time_in_hour() > 7 and Time_in_hour() < 19 then
 		-- 	vim.cmd("colorscheme kanagawa-wave")
 		-- else
-		-- 	vim.cmd("colorscheme kanagawa-dragon")
+			-- vim.cmd("colorscheme kanagawa-wave")
 		-- end
 		--
 	end,
 }
+

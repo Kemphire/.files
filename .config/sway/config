@@ -230,8 +230,7 @@ exec_always --no-startup-id "$HOME/Scripts/random_wallpaper.sh"
 
 # to start apps on startup
 
-exec_always --no-startup-id firefox
-for_window [app_id="firefox$"] move workspace 2
+exec_always --no-startup-id "$HOME/Scripts/open_firefox.sh"
 
 # open terminal in scratchpad
 
