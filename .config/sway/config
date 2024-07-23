@@ -234,6 +234,10 @@ exec_always --no-startup-id "$HOME/Scripts/open_firefox.sh"
 
 exec_always --no-startup-id "~/Scripts/start_foot_scratchpad.sh"
 
+# for remapping esc with capslock
+
+exec_always --no-startup-id "~/.cargo/bin/xremap ~/.config/xremap/config.yml"
+
 gaps outer 5
 
 # for font

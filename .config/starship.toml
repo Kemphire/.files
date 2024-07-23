@@ -70,7 +70,7 @@ symbol = " "
 symbol = " "
 
 [git_branch]
-symbol = " "
+symbol = " (golden)"
 
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style) )'
