@@ -20,6 +20,10 @@ function ls
 	eza -la $argv
 end
 
+function suz
+	sudo zypper $argv
+end
+
 set EDITOR "nvim"
 set -x MANPAGER "nvim +Man!"
 zoxide init fish | source
