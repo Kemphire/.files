@@ -1,5 +1,5 @@
 # Default config for sway
-#
+
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
@@ -236,7 +236,7 @@ exec_always --no-startup-id "~/Scripts/start_foot_scratchpad.sh"
 
 # for remapping esc with capslock
 
-exec_always --no-startup-id "~/.cargo/bin/xremap ~/.config/xremap/config.yml"
+exec_always --no-startup-id "~/.cargo/bin/xremap $HOME/.config/xremap/config.yml"
 
 gaps outer 5
 

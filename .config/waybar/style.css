@@ -1,8 +1,8 @@
 * {
-	font-family: BlexMonoNerd, JetBrains Mono Regular, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-	font-size: 15px;
+	font-family: JetBrains Mono Regular,  BlexMonoNerd, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+	font-size: 12px;
 	border: none;
-	border-radius: 0;
+	border-radius: 3px;
 	min-height: 0;
 }
 
@@ -23,13 +23,14 @@ window#waybar.hidden {
 	color: #f8f8f2;
 	border-bottom: 3px solid transparent;
 	font-size: 4em;
-	border-radius: 7px;
+	border-radius: 5px;
 }
 
 button:hover {
 	background: rgba(68, 71, 90, 0.5);
 	box-shadow: inherit;
 	border-bottom: 3px solid #f8f8f2;
+	border-radius: 6px;
 }
 
 #workspaces button.focused {
@@ -70,7 +71,7 @@ window#waybar.firefox {
 	padding: 2px 5px;
 	margin: 1px 2px;
 	color: #282a36;
-	border-radius: 4px;
+	border-radius: 2px;
 }
 
 #window,
@@ -218,4 +219,9 @@ window#waybar.firefox {
 
 #privacy-item.audio-out {
 	background-color: #8be9fd;
+}
+
+#backlight {
+	background-color: #5D1FF5;
+	color: greenyellow;
 }
