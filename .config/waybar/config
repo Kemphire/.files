@@ -10,7 +10,8 @@
         "sway/workspaces",
         "sway/mode",
         "sway/scratchpad",
-        "custom/media"
+        "custom/media",
+				"keyboard-state",
     ],
     "modules-center": [
         "sway/window"
@@ -24,6 +25,7 @@
         "battery",
         "clock",
         "tray",
+				"media",
     ],
     // Modules configuration
     // "sway/workspaces": {
@@ -43,7 +45,6 @@
     //     }
     // },
     "keyboard-state": {
-        "numlock": true,
         "capslock": true,
         "format": "{name} {icon}",
         "format-icons": {

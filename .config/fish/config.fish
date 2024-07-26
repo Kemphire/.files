@@ -26,4 +26,5 @@ end
 
 set EDITOR "nvim"
 set -x MANPAGER "nvim +Man!"
+set -x PAGER "nvim +Man!"
 zoxide init fish | source
