@@ -1,3 +1,6 @@
+# for dynamic tilling
+exec_always autotiling -w 1 3 5 7 9
+
 # Default config for sway
 
 # Copy this to ~/.config/sway/config and edit it to your liking.
@@ -254,6 +257,9 @@ mode $exit {
 }
 
 bindsym --to-code $mod+x mode $exit
+
+bindsym $mod+o exec swaymsg exit
+
 
 gaps outer 5
 gaps inner 10
