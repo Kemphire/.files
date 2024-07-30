@@ -16,6 +16,10 @@ set -gx PKG_CONFIG_PATH "/home/linuxbrew/.linuxbrew/opt/postgresql@16/lib/pkgcon
 
 set -x PATH $PATH /home/$USER/go/bin
 
+# for cursor visibility
+
+set WLR_NO_HARDWARE_CURSORS 1
+
 function fish_default_key_bindings
 	fish_vi_key_bindings
 end

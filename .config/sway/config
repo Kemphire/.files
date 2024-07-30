@@ -281,6 +281,7 @@ default_border pixel 3
 
 # for waybar
 bar { 
+		 position top
      swaybar_command waybar
 }
 
