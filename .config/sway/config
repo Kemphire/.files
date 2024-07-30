@@ -277,14 +277,6 @@ bindgesture pinch:inward+right move right
 
 default_floating_border pixel
 
-default_border pixel 3
-
-# for waybar
-bar { 
-		 position top
-     swaybar_command waybar
-}
-
 # for bringing colors for active windows
 client.focused #B28E1A #B28E1A #B28E1A #B28E1A
 
