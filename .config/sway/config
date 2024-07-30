@@ -220,6 +220,7 @@ bindsym $mod+r mode "resizer
 #    }
 #}
 
+
 # to take screenshots
 
 bindsym $mod+shift+s exec "$HOME/Scripts/screenshots.sh"
@@ -234,7 +235,6 @@ exec_always --no-startup-id "$HOME/Scripts/random_wallpaper.sh"
 exec_always --no-startup-id "$HOME/Scripts/open_firefox.sh"
 
 # open terminal in scratchpad
-
 
 exec_always --no-startup-id "~/Scripts/start_foot_scratchpad.sh"
 
@@ -261,8 +261,7 @@ bindsym --to-code $mod+x mode $exit
 bindsym $mod+o exec swaymsg exit
 
 
-gaps outer 5
-gaps inner 10
+gaps inner 10px
 
 
 # allow mouse gestures 
@@ -277,9 +276,16 @@ bindgesture pinch:inward+left move left
 bindgesture pinch:inward+right move right
 
 default_floating_border pixel
-smart_gaps on
 
 default_border pixel 3
+
+# for waybar
+bar { 
+     swaybar_command waybar
+}
+
+# for bringing colors for active windows
+client.focused #B28E1A #B28E1A #B28E1A #B28E1A
 
 include /etc/sway/config.d/*.conf
 include ~/.config/sway/config.d/*
