@@ -41,9 +41,9 @@ set $menu exec wofi
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
+         timeout 300 'swaylock -f -c 000000 --image $(sh ~/Scripts/random_pic_swaylock.sh)' \
          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-         before-sleep 'swaylock -f -c 000000'
+         before-sleep 'swaylock -f -c 000000 --image $(sh ~/Scripts/random_pic_swaylock.sh)'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -262,6 +262,7 @@ bindsym $mod+o exec swaymsg exit
 
 
 gaps inner 10px
+gaps outer 15px
 
 
 # allow mouse gestures 
