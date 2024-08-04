@@ -1,5 +1,5 @@
 # for dynamic tilling
-exec_always autotiling -w 1 3 5 7 9
+exec_always --no-startup-id autotiling
 
 # Default config for sway
 
@@ -223,16 +223,16 @@ bindsym $mod+r mode "resizer
 
 # to take screenshots
 
-bindsym $mod+shift+s exec "$HOME/Scripts/screenshots.sh"
+bindsym $mod+shift+s exec "$HOME/Scripts/screenshots.sh" && notify-send "Screenshot saved to the folder"
 # for wallpaper management
 bindsym $mod+shift+w exec "$HOME/Scripts/random_wallpaper.sh"
 bindsym $mod+shift+r exec "$HOME/Scripts/wallpaper_switcher_using_wofi.sh" # to start swww daemon on startup
 
-exec_always --no-startup-id "$HOME/Scripts/random_wallpaper.sh"
+exec --no-startup-id "$HOME/Scripts/random_wallpaper.sh"
 
 # to start apps on startup
 
-exec_always --no-startup-id "$HOME/Scripts/open_firefox.sh"
+exec --no-startup-id "$HOME/Scripts/open_firefox.sh"
 
 # open terminal in scratchpad
 
@@ -276,10 +276,12 @@ bindgesture pinch:inward+down move down
 bindgesture pinch:inward+left move left
 bindgesture pinch:inward+right move right
 
-default_floating_border pixel
+default_floating_border pixel 2
+default_border pixel 2
 
 # for bringing colors for active windows
-client.focused #B28E1A #B28E1A #B28E1A #B28E1A
+client.focused #B28E1A #B28E1A #B28E1A #B28E1A #B28E1A
+
 
 include /etc/sway/config.d/*.conf
 include ~/.config/sway/config.d/*
