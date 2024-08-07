@@ -280,7 +280,7 @@ default_floating_border pixel 2
 default_border pixel 2
 
 # for bringing colors for active windows
-client.focused #B28E1A #B28A1A #B28EBA #B28E1E #B28C1A
+client.focused #A3554D #B28A1A #B28EBA #B28E1E #B28C1A
 
 
 include /etc/sway/config.d/*.conf
