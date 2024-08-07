@@ -16,6 +16,7 @@ set -gx PKG_CONFIG_PATH "/home/linuxbrew/.linuxbrew/opt/postgresql@16/lib/pkgcon
 
 set -x PATH $PATH /home/$USER/go/bin
 
+set -x CPLUS_INCLUDE_PATH /usr/include/c++/11:/usr/include/x86_64-linux-gnu/c++/11
 # for cursor visibility
 
 set -gx WLR_NO_HARDWARE_CURSORS 1

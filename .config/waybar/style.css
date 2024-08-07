@@ -64,6 +64,7 @@ window#waybar.firefox {
 #network,
 #pulseaudio,
 #custom-media,
+#custom-vivaldi,
 #tray,
 #mode,
 #idle_inhibitor,
@@ -90,6 +91,9 @@ window#waybar.firefox {
 	background-color: #50fa7b;
 }
 
+#custom-vivaldi{
+	color: red;
+}
 #battery.charging,
 #battery.plugged {
 	background-color: #8be9fd;

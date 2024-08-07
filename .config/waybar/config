@@ -7,6 +7,7 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+				"custom/vivaldi",
         "sway/workspaces",
         "sway/mode",
         "sway/scratchpad",
@@ -182,6 +183,12 @@
         },
         "on-click": "pavucontrol"
     },
+		"custom/vivaldi":{
+			"format":"{} ",
+			"tooltip": false,
+			"on-click":"sleep 0.1 && vivaldi",
+			"on-click-right":"librewolf",
+		},
     "custom/media": {
         "format": "{icon} {}",
         "return-type": "json",
