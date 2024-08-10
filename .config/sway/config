@@ -1,6 +1,12 @@
 # for dynamic tilling
 exec_always --no-startup-id autotiling
 
+# important to run to avoid issues while running waybar
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
+# exec waybar
+exec waybar
+
 # Default config for sway
 
 # Copy this to ~/.config/sway/config and edit it to your liking.
@@ -282,6 +288,16 @@ default_border pixel 2
 # for bringing colors for active windows
 client.focused #A3554D #B28A1A #B28EBA #B28E1E #B28C1A
 
+# swayfx specific configs
+shadows enable 
+smart_corner_radius enable
+corner_radius 8
+shadow_blur_radius 8
+blur enable
+blur_xray enable
+
+layer_effects "wofi" blur enable; shadows enable; corner_radius 13
+layer_effects "waybar" blur enable; shadows disable
 
 include /etc/sway/config.d/*.conf
 include ~/.config/sway/config.d/*

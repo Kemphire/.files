@@ -20,6 +20,7 @@ set -x CPLUS_INCLUDE_PATH /usr/include/c++/11:/usr/include/x86_64-linux-gnu/c++/
 # for cursor visibility
 
 set -gx WLR_NO_HARDWARE_CURSORS 1
+set -gx python3 /usr/bin/python3
 
 function fish_default_key_bindings
 	fish_vi_key_bindings
@@ -33,6 +34,6 @@ function suz
 	sudo zypper $argv
 end
 
-set EDITOR "nvim"
+set -x EDITOR "nvim"
 set -x MANPAGER "nvim +Man!"
 zoxide init fish | source
