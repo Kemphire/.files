@@ -14,3 +14,5 @@ vim.opt.ignorecase = true
 vim.keymap.set('c', '<tab>', '<C-z>', { silent = false })
 vim.cmd("set nohlsearch")
 -- vim.cmd "colorscheme everforest"
+
+

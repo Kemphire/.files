@@ -294,10 +294,37 @@ smart_corner_radius enable
 corner_radius 8
 shadow_blur_radius 8
 blur enable
+blur_passes 1
+shadows_on_csd enable
+dim_inactive_window 0.1
 blur_xray enable
 
 layer_effects "wofi" blur enable; shadows enable; corner_radius 13
 layer_effects "waybar" blur enable; shadows disable
+
+# for cursor size
+
+exec gsettings set org.gnome.desktop.interface cursor-size 30
+
+# for clipboard management
+exec_always --no-startup-id clipse -listen
+
+
+for_window [app_id="clipse"] floating enable, resize set 724 652
+
+bindsym $mod+V exec kitty --class clipse -e 'clipse'
+
+# for using avizo as a multimedia manager
+
+bindsym XF86AudioRaiseVolume exec volumectl -u up
+bindsym XF86AudioLowerVolume exec volumectl -u down
+bindsym XF86AudioMute exec volumectl toggle-mute
+bindsym XF86AudioMicMute exec volumectl -m toggle-mute
+
+bindsym XF86MonBrightnessUp exec lightctl up
+bindsym XF86MonBrightnessDown exec lightctl down
+
+exec "avizo-service"
 
 include /etc/sway/config.d/*.conf
 include ~/.config/sway/config.d/*

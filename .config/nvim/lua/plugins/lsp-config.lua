@@ -22,6 +22,7 @@ return {
 					"html",
 					"emmet_language_server",
 					"cssls",
+					"texlab",
 				},
 				auto_install = true,
 			})
@@ -53,6 +54,10 @@ return {
 			lspconfig.cssls.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.texlab.setup({
+				capabilities = capabilities,
+			})
+
 			vim.keymap.set("n", "<leader>d", vim.lsp.buf.hover, {})
 			vim.keymap.set({ "v", "n" }, "<leader>gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "v", "n" }, "<leader>ca", vim.lsp.buf.code_action, {})

@@ -4,7 +4,7 @@ return {
 	config = function()
 		require("lualine").setup({
 			options = {
-				theme = "gruvbox",
+				theme = "dracula",
 				"filename",
 				file_status = true,
 				path = 1,

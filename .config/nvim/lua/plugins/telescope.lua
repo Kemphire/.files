@@ -13,11 +13,11 @@ return {
 		vim.keymap.set("n","<leader>df",builtin.diagnostics,{noremap = true, silent = true})
 		vim.keymap.set("n","<leader>tf",builtin.treesitter,{noremap = true, silent = true})
 		require("telescope").setup({
-			pickers = {
-				find_files = {
-					theme = "dropdown",
-				}
-			}
+			-- pickers = {
+			-- 	find_files = {
+			-- 		theme = "dropdown",
+			-- 	}
+			-- }
 		})
 	end,
 }
