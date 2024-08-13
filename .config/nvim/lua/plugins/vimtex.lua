@@ -5,6 +5,6 @@ return {
   init = function()
     -- VimTeX configuration goes here, e.g.
     vim.g.vimtex_view_method = "sioyek"
-		vim.g.vimtex_compiler_method = "pdflatex"
+		vim.g.vimtex_compiler_method = "luatex"
   end
 }

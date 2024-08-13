@@ -7,6 +7,7 @@ return {
 		opts = {
 			ensure_installed = {
 				"clang-format",
+				"latexindent",
 			}
 		}
 	},
@@ -39,9 +40,9 @@ return {
 			lspconfig.html.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.clangd.setup({
-				capabilities = capabilities,
-			})
+			-- lspconfig.clangd.setup({
+			-- 	capabilities = capabilities,
+			-- })
 			lspconfig.quick_lint_js.setup({
 				capabilities = capabilities,
 			})
@@ -56,6 +57,21 @@ return {
 			})
 			lspconfig.texlab.setup({
 				capabilities = capabilities,
+			})
+			lspconfig.ccls.setup({
+				capabilities=capabilities,
+				on_attach = function (client, bufnr)
+					
+				end,
+				flags = {
+					debounce_text_changes = 150,
+				},
+				cmd = {"/usr/bin/ccls"},
+				init_options = {
+					clang = {
+						extraARGS = {"--stdc++17"},
+					}
+				}
 			})
 
 			vim.keymap.set("n", "<leader>d", vim.lsp.buf.hover, {})

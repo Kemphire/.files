@@ -7,6 +7,9 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 # exec waybar
 exec waybar
 
+# start notification daemon
+exec --no-startup-id mako
+
 # Default config for sway
 
 # Copy this to ~/.config/sway/config and edit it to your liking.
@@ -229,7 +232,7 @@ bindsym $mod+r mode "resizer
 
 # to take screenshots
 
-bindsym $mod+shift+s exec "$HOME/Scripts/screenshots.sh" && notify-send "Screenshot saved to the folder"
+bindsym $mod+shift+s exec "$HOME/Scripts/screenshots.sh" 
 # for wallpaper management
 bindsym $mod+shift+w exec "$HOME/Scripts/random_wallpaper.sh"
 bindsym $mod+shift+r exec "$HOME/Scripts/wallpaper_switcher_using_wofi.sh" # to start swww daemon on startup

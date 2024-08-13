@@ -14,6 +14,7 @@ filepath="$directory/$filename"
 grim -g "$(slurp)" - | swappy -f - -o "$filepath"
 
 # Notify the user
-echo "Screenshot saved to $filepath"
+# echo "Screenshot saved to $filepath"
+notify-send --icon="$filename" "Image saved in $filename"
 
 

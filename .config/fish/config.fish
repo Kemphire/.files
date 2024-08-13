@@ -34,6 +34,9 @@ function suz
 	sudo zypper $argv
 end
 
+# Set up fzf key bindings
+fzf --fish | source
+
 set -x EDITOR "nvim"
 set -x MANPAGER "nvim +Man!"
 zoxide init fish | source
