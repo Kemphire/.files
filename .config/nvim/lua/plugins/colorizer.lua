@@ -9,6 +9,7 @@ return {
 			'swayconfig',
 			'jsonc',
 			'json',
+			'conf',
 			html = {
 				mode = "foreground",
 			}

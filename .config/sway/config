@@ -62,12 +62,12 @@ exec swayidle -w \
 #
 # Example configuration:
 #
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
+  input "2:14:SynPS/2_Synaptics_TouchPad" {
+      dwt enabled
+      tap enabled
+      natural_scroll enabled
+      middle_emulation enabled
+  }
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
@@ -286,7 +286,7 @@ bindgesture pinch:inward+left move left
 bindgesture pinch:inward+right move right
 
 default_floating_border pixel 2
-default_border pixel 2
+default_border pixel 4
 
 # for bringing colors for active windows
 client.focused #A3554D #B28A1A #B28EBA #B28E1E #B28C1A
@@ -302,8 +302,8 @@ shadows_on_csd enable
 dim_inactive_window 0.1
 blur_xray enable
 
-layer_effects "wofi" blur enable; shadows enable; corner_radius 13
-layer_effects "waybar" blur enable; shadows disable
+layer_effects "wofi" blur enable; blur_xray enable; shadows enable; corner_radius 13
+layer_effects "waybar" blur enable; shadows enable
 
 # for cursor size
 
@@ -328,6 +328,10 @@ bindsym XF86MonBrightnessUp exec lightctl up
 bindsym XF86MonBrightnessDown exec lightctl down
 
 exec "avizo-service"
+
+# to set scaling in sway
+
+output eDP-1 scale 1.15
 
 include /etc/sway/config.d/*.conf
 include ~/.config/sway/config.d/*
