@@ -6,6 +6,7 @@ window{
 	font-family: "JetBrains Mono Nerd Medium";
 	background-color: rgba(50, 50, 50, 0.4);
 	color: crimson;
+	border-radium: 1em;
 }
 
 #entry:selected {

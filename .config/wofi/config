@@ -1,7 +1,7 @@
 mode=drun
 allow_images=true
 image_size=64
-width=40%
+width=70%
 insensitivity=true
-prompt=Explore Me
+prompt=Hello my grace!
 term=foot
