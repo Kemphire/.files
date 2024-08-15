@@ -6,8 +6,12 @@ return {
 	config = function()
 		require("oil").setup({
 			columns = {
-				"permissions",
 				"icon",
+			},
+			preview = {
+				win_options = {
+					winblend = 1,
+				}
 			},
 			float = {
 				padding = 2,
@@ -15,7 +19,7 @@ return {
 				max_height = 30,
 				border = "rounded",
 				win_options = {
-					winblend = 0,
+					winblend = 1,
 				},
 			},
 			vim.keymap.set({ "v", "n" }, "--", "<CMD>Oil --float<CR>", { desc = "Open parent directory" }),
