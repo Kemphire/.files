@@ -1,3 +1,3 @@
-function fish_greeting
-	fortune -a
+function fish_greeting -d "Used fortune to greet you"
+	fortune -o
 end

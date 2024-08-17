@@ -867,8 +867,7 @@ single_window_margin_width 0
 #: only at the bottom and right edges. The value can be one of: top-
 #: left, top, top-right, left, center, right, bottom-left, bottom,
 #: bottom-right.
-
-active_border_color #0dff00
+# active_border_color #0dff00
 
 #: The color for the border of the active window. Set this to none to
 #: not draw borders around the active window.
@@ -2515,6 +2514,6 @@ background_opacity 0.5
 
 
 # BEGIN_KITTY_THEME
-# Tokyo Night
+# 1984 Orwellian
 include current-theme.conf
 # END_KITTY_THEME

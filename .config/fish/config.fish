@@ -34,6 +34,11 @@ function suz
 	sudo zypper $argv
 end
 
+# abbrevations
+abbr -a n --position command nvim
+abbr gs git status
+
+
 # Set up fzf key bindings
 fzf --fish | source
 
