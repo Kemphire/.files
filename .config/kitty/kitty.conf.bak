@@ -6,10 +6,10 @@
 #: individual font faces and even specify special fonts for particular
 #: characters.
 
-font_family 	   BlexMonoNerdFontMono
-# bold_font        auto
-# italic_font      auto
-# bold_italic_font auto
+font_family 	     FiraCode-Regular Font
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
 
 #: You can specify different fonts for the bold/italic/bold-italic
 #: variants. To get a full list of supported fonts use the `kitty
@@ -74,7 +74,7 @@ font_size 16.0
 
 #:     narrow_symbols codepoints [optionally the number of cells]
 
-# disable_ligatures never
+disable_ligatures never
 
 #: Choose how you want to handle multi-character ligatures. The
 #: default is to always render them. You can tell kitty to not render
@@ -271,7 +271,7 @@ font_size 16.0
 #: so if you want to override it, place your value after the lines
 #: where the theme file is included.
 
-# cursor_shape block
+cursor_shape beam
 
 #: The cursor shape can be one of block, beam, underline. Note that
 #: when reloading the config this will be changed only if the cursor
@@ -827,14 +827,14 @@ underline_hyperlinks hover
 #: that setting a non-zero window_margin_width overrides this and
 #: causes all borders to be drawn.
 
-# window_margin_width 0
+window_margin_width 6
 
 #: The window margin (in pts) (blank area outside the border). A
 #: single value sets all four sides. Two values set the vertical and
 #: horizontal sides. Three values set top, horizontal and bottom. Four
 #: values set top, right, bottom and left.
 
-# single_window_margin_width -1
+single_window_margin_width 0
 
 #: The window margin to use when only a single window is visible (in
 #: pts). Negative values will cause the value of window_margin_width
@@ -868,7 +868,7 @@ underline_hyperlinks hover
 #: left, top, top-right, left, center, right, bottom-left, bottom,
 #: bottom-right.
 
-# active_border_color #00ff00
+active_border_color #0dff00
 
 #: The color for the border of the active window. Set this to none to
 #: not draw borders around the active window.
@@ -984,7 +984,7 @@ tab_bar_edge bottom
 #: The second number is the margin between the tab bar and the
 #: contents of the current tab.
 
-# tab_bar_style fade
+tab_bar_style powerline
 
 #: The tab bar style, can be one of:
 
@@ -1042,7 +1042,7 @@ tab_bar_edge bottom
 #: The separator between tabs in the tab bar when using separator as
 #: the tab_bar_style.
 
-# tab_powerline_style angled
+tab_powerline_style round
 
 #: The powerline separator style between tabs in the tab bar when
 #: using powerline as the tab_bar_style, can be one of: angled,
@@ -1163,7 +1163,7 @@ tab_bar_edge bottom
 #: this option when reloading the config will only work if
 #: dynamic_background_opacity was enabled in the original config.
 
-# background_blur 0
+background_blur 20
 
 #: Set to a positive value to enable background blur (blurring of the
 #: visuals behind a transparent window) on platforms that support it.
@@ -1613,7 +1613,7 @@ editor .
 #:     # Here %c is replaced by the current command line and %s by the job exit code
 #:     notify_on_cmd_finish invisible 10.0 command notify-send "job finished with status: %s" %c
 
-# term xterm-kitty
+term xterm-256color
 
 #: The value of the TERM environment variable to set. Changing this
 #: can break many terminal programs, only change it if you know what
@@ -2347,7 +2347,7 @@ editor .
 
 # setting background opacity
 
-background_opacity 0.3
+background_opacity 0.5
 
 #: Increase background opacity
 
@@ -2515,6 +2515,6 @@ background_opacity 0.3
 
 
 # BEGIN_KITTY_THEME
-# Ciapre
+# Tokyo Night
 include current-theme.conf
 # END_KITTY_THEME

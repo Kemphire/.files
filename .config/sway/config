@@ -1,6 +1,5 @@
 # for dynamic tilling
 exec_always --no-startup-id autotiling
-
 # important to run to avoid issues while running waybar
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
@@ -25,6 +24,10 @@ set $left h
 set $down j
 set $up k
 set $right l
+
+# Preferred explorer
+set $explorer dolphin
+
 # Your preferred terminal emulator
 set $term kitty 
 # Your preferred application launcher
@@ -55,7 +58,7 @@ set $menu exec wofi
 #          before-sleep 'swaylock -f -c 000000 --image $(sh ~/Scripts/random_pic_swaylock.sh)'
 exec swayidle -w \
     timeout 300 'swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0.2' \
-    timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+    timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
     before-sleep 'swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0.2'
 
 #
@@ -83,6 +86,9 @@ exec swayidle -w \
 #
     # Start a terminal
     bindsym $mod+Return exec $$term
+
+		# Start a file explorer
+		bindsym $mod+Shift+f exec $$explorer
 
     # Kill focused window
     bindsym $mod+c kill
@@ -276,7 +282,7 @@ bindsym $mod+o exec swaymsg exit
 
 
 gaps inner 10px
-gaps outer 15px
+gaps outer 2px
 
 
 # allow mouse gestures 
@@ -291,20 +297,31 @@ bindgesture pinch:inward+left move left
 bindgesture pinch:inward+right move right
 
 default_floating_border pixel 2
-default_border pixel 4
+default_border pixel 2
 
 # for bringing colors for active windows
-client.focused #A3554D #B28A1A #B28EBA #B28E1E #B28C1A
+set $bg            #cc353d
+set $bg-inactive   #1d2021
+set $bg-urgent     #000000
+set $text          #eeeeec
+set $text-inactive #babdb6
+set $bar           #323232
+
+client.focused          $bg           $bg          $text          $bg $bg
+client.unfocused        $bg-inactive  $bg-inactive $text-inactive $bar $bar
+client.focused_inactive $bg-inactive  $bg-inactive $text-inactive $bar $bar
+client.urgent           $bg-urgent    $bg-urgent   $text          $bar $bar
 
 # swayfx specific configs
 shadows enable 
 smart_corner_radius enable
-corner_radius 8
-shadow_blur_radius 8
+corner_radius 10
+shadow_blur_radius 15
 blur enable
+blur_radius 3
 blur_passes 1
 shadows_on_csd enable
-dim_inactive_window 0.1
+dim_inactive_window 0.2
 blur_xray enable
 
 layer_effects "wofi" blur enable; shadows enable; corner_radius 13
