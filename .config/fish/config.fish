@@ -37,6 +37,7 @@ end
 # abbrevations
 abbr -a n --position command nvim
 abbr gs git status
+abbr ga git add -A
 
 
 # Set up fzf key bindings
