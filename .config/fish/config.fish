@@ -38,6 +38,8 @@ end
 abbr -a n --position command nvim
 abbr gs git status
 abbr ga git add -A
+abbr gc git commit
+abbr gp git push
 
 
 # Set up fzf key bindings
