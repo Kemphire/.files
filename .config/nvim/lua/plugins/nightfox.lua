@@ -8,7 +8,7 @@ end
 return {
     "EdenEast/nightfox.nvim",
     lazy = false,
-    priority = 1000,
+    priority = 3000,
 
     config = function()
         require("nightfox").setup({
@@ -23,6 +23,8 @@ return {
         -- else
         --     vim.cmd("colorscheme carbonfox")
         -- end
+				-- modified on -> 2024-08-18
+				vim.cmd("colorscheme carbonfox")
     end
 }
 

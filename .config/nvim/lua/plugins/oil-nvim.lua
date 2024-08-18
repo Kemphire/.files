@@ -1,5 +1,6 @@
 return {
 	"stevearc/oil.nvim",
+	event = "VimEnter",
 	opts = {},
 	-- Optional dependencies
 	dependencies = { "echasnovski/mini.icons" },

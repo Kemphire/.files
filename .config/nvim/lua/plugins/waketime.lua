@@ -1,3 +1,6 @@
 return {
-	{ "wakatime/vim-wakatime", lazy = false },
+	{
+		"wakatime/vim-wakatime",
+		event = "VimEnter",
+	},
 }

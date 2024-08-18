@@ -8,7 +8,8 @@ return{
 	config = function()
 		require("everforest").setup({
 			-- Your config here
-			vim.cmd "colorscheme everforest"
+			-- modified on -> 18/08/2024
+			-- vim.cmd "colorscheme everforest"
 		})
 	end,
 }
