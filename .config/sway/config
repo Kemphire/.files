@@ -247,9 +247,10 @@ bindsym $mod+r mode "resizer
 # to take screenshots
 
 bindsym --no-repeat $mod+shift+s exec "$HOME/Scripts/screenshots.sh" 
+
 # for wallpaper management
 bindsym $mod+shift+w exec "$HOME/Scripts/random_wallpaper.sh"
-bindsym $mod+shift+r exec "$HOME/Scripts/wallpaper_switcher_using_wofi.sh" # to start swww daemon on startup
+bindsym $mod+shift+r exec "$HOME/Scripts/wallpaper_switcher_using_wofi.sh" 
 
 exec --no-startup-id "$HOME/Scripts/random_wallpaper.sh"
 
@@ -259,7 +260,7 @@ exec --no-startup-id "$HOME/Scripts/open_firefox.sh"
 
 # open terminal in scratchpad
 
-exec_always --no-startup-id "~/Scripts/start_foot_scratchpad.sh"
+exec --no-startup-id "~/Scripts/start_foot_scratchpad.sh"
 
 #
 # exit mode

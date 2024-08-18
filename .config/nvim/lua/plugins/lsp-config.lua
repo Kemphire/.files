@@ -14,6 +14,7 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
+		event = "BufWinEnter",
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {

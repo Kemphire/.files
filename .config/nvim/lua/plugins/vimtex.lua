@@ -1,6 +1,7 @@
 return {
   "lervag/vimtex",
-	lazy = false,
+	-- lazy =  false,
+	event = "BufWinEnter",
   version = "*", -- uncomment to pin to a specific release
   init = function()
     -- VimTeX configuration goes here, e.g.
