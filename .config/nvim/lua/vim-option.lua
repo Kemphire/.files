@@ -26,3 +26,37 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 	desc = "load view (folds), when opening file",
 	command = "silent! loadview",
 })
+
+-- for easier motion in bufferline
+vim.keymap.set({ "n", "i" }, "<leader>h", ":BufferLineCyclePrev<CR>", { noremap = true, silent = true })
+vim.keymap.set({ "n", "i" }, "<leader>l", ":BufferLineCycleNext<CR>", { noremap = true, silent = true })
+
+-- to check if a file exist or not
+function file_exists(filename)
+	local file = io.open(filename, "r")
+	if file then
+		file:close()
+		return true
+	else
+		return false
+	end
+end
+
+--  if there is a sesssion.vim file containig session load if
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		-- Add a delay of 500ms before sourcing the session.vim
+		vim.defer_fn(function()
+			if file_exists("session.vim") then
+				vim.cmd("source session.vim")
+			end
+		end, 500)  -- Delay in milliseconds
+	end,
+})
+vim.api.nvim_create_autocmd("VimLeavePre", {
+	callback = function()
+		if file_exists("session.vim") then
+			vim.cmd("mksession! session.vim")
+		end
+	end,
+})

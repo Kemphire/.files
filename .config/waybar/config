@@ -21,7 +21,6 @@
         "pulseaudio",
         "network",
         "memory",
-        "temperature",
 				"backlight",
         "battery",
         "clock",

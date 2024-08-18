@@ -2,6 +2,7 @@
     "diagnostics.globals": [
         "vim",
         "local",
-        "time"
+        "time",
+        "file_exist"
     ]
 }
