@@ -34,6 +34,16 @@ return {
 					["<C-Space>"] = cmp.mapping.complete(),
 					["<C-e>"] = cmp.mapping.abort(),
 					["<CR>"] = cmp.mapping.confirm({ select = true }),
+
+					-- activate completions only when ctrl+n is pressed
+					-- if completions is already active then pressing ctrl+n will will select next suggestion
+					-- ["C-n"] = cmp.mapping(function(fallback)
+					-- 	if cmp.visible() then
+					-- 		cmp.select_next_item()
+					-- 	else
+					-- 		cmp.complete()
+					-- 	end
+					-- end, { "i", "s" }),
 				}),
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
@@ -41,6 +51,19 @@ return {
 				}, {
 					{ name = "buffer" },
 				}),
+				completion = {
+					autocomplete = false,
+				},
+				enabled = function()
+					-- disable completion in comment
+					local context = require("cmp.config.context")
+					-- keep command mode completion enabled when cursor is in a comment
+					if vim.api.nvim_get_mode().mode == "c" then
+						return true
+					else
+						return not context.in_treesitter_capture("comment") and not context.in_syntax_group("Comment")
+					end
+				end,
 			})
 
 			-- To use git you need to install the plugin petertriho/cmp-git and uncomment lines below
