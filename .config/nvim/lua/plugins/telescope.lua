@@ -1,6 +1,7 @@
 return {
 	"nvim-telescope/telescope.nvim",
 	event = "VimEnter",
+	lazy = true,
 	tag = "0.1.6",
 	dependencies = { "nvim-lua/plenary.nvim" },
 	config = function()
