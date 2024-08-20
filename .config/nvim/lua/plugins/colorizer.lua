@@ -10,6 +10,7 @@ return {
 			'jsonc',
 			'json',
 			'conf',
+			'lua',
 			html = {
 				mode = "foreground",
 			}
