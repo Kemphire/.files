@@ -9,7 +9,7 @@ return {
 		priority = 1000,
 		init = function()
 			require("cyberdream").setup({
-				transparent = true,
+				transparent = false,
 				italic_comments = true,
 
 				-- Modern borderless telescope theme - also applies to fzf-lua
@@ -31,6 +31,7 @@ return {
 					lazy = true,
 					treesitter = true,
 					alpha = true,
+					oil = true,
 				},
 			})
 			vim.cmd("colorscheme cyberdream")
