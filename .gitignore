@@ -1,3 +1,4 @@
-.config/clipse/clipboard_history.json
 .config/clipse/tmp_files/*
 
+# Ignore all JSON files under .config/clipse/ and its subdirectories
+.config/clipse/**/*.json
