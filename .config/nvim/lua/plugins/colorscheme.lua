@@ -43,15 +43,15 @@ return {
 
 		config = function()
 			require("kanagawa").setup({
-				transparent = false,
+				transparent = true,
 				terminaColors = true,
 				commentStyle = { italic = true },
 			})
 			-- will configure it later
 			-- if Time_in_hour() > 7 and Time_in_hour() < 19 then
-			-- 	vim.cmd("colorscheme kanagawa-wave")
+				-- vim.cmd("colorscheme kanagawa-dragon")
 			-- else
-			-- 	vim.cmd("colorscheme kanagawa-dragon")
+			-- 	vim.cmd("colorscheme kanagawa-wave")
 			-- end
 			--
 		end,
