@@ -13,7 +13,7 @@ vim.cmd("set wildmenu")
 vim.opt.ignorecase = true
 vim.keymap.set("c", "<tab>", "<C-z>", { silent = false })
 vim.cmd("set nohlsearch")
--- vim.cmd "colorscheme everforest"
+vim.cmd "colorscheme industry"
 
 -- for persistent code folding
 vim.api.nvim_create_autocmd({ "BufWinLeave" }, {

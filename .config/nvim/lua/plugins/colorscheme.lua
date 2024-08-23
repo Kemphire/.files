@@ -51,7 +51,7 @@ return {
 			-- if Time_in_hour() > 7 and Time_in_hour() < 19 then
 			-- vim.cmd("colorscheme kanagawa-dragon")
 			-- else
-			-- 	vim.cmd("colorscheme kanagawa-wave")
+				-- vim.cmd("colorscheme kanagawa-dragon")
 			-- end
 			--
 		end,
@@ -76,8 +76,9 @@ return {
 					sidebars = "dark", -- style for sidebars, see below
 					floats = "dark", -- style for floating windows
 				},
+				hide_inactive_statusline = false,
 			})
-			vim.cmd("colorscheme eldritch")
+			-- vim.cmd("colorscheme eldritch")
 		end
 	},
 }

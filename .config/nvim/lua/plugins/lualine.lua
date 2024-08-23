@@ -6,7 +6,7 @@ return {
 	config = function()
 		require("lualine").setup({
 			options = {
-				theme = "auto",
+				theme = "dracula",
 				"filename",
 				file_status = true,
 				path = 1,

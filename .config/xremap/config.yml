@@ -5,3 +5,9 @@ modmap:
         held: leftctrl
         alone: esc
         alone_timeout_millis: 250
+
+keymap:
+  - name: caps revival
+    remap:
+      SHIFT-KEY_ESC: CapsLock 
+

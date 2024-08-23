@@ -186,7 +186,7 @@
 			"format":"{} ",
 			"tooltip": false,
 			"on-click":"sleep 0.1 && vivaldi",
-			"on-click-right":"librewolf",
+			"on-click-right":"flatpak run io.github.zen_browser.zen",
 		},
     "custom/media": {
         "format": "{icon} {}",

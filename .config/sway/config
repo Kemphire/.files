@@ -12,6 +12,10 @@ exec --no-startup-id mako
 # start kde-connect
 exec --no-startup-id /usr/lib/kdeconnectd
 
+# start xremap for remapping caps and esc keys
+
+exec --no-startup-id "xremap ~/.config/xremap/config.yml"
+
 # Default config for sway
 
 # Copy this to ~/.config/sway/config and edit it to your liking.

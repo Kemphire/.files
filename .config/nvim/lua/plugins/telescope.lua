@@ -22,7 +22,7 @@ return {
 			defaults = {
 				prompt_prefix = "🔍  ",
 				selection_caret = " ",
-				winblend = 30,
+				winblend = 40,
 				mappings = {
 					i = {
 						["<C-n>"] = require("telescope.actions").move_selection_next,
