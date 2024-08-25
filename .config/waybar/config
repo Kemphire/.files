@@ -183,10 +183,11 @@
         "on-click": "pavucontrol"
     },
 		"custom/vivaldi":{
-			"format":"{} ",
-			"tooltip": false,
+			"format":"{}  ",
+			"tooltip": true,
+			"tooltip-format":"Open Browser",
 			"on-click":"sleep 0.1 && vivaldi",
-			"on-click-right":"flatpak run io.github.zen_browser.zen",
+			"on-click-right":"sleep 0.1 && flatpak run io.github.zen_browser.zen",
 		},
     "custom/media": {
         "format": "{icon} {}",

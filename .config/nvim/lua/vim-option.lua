@@ -28,8 +28,9 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 })
 
 -- for easier motion in bufferline
-vim.keymap.set({ "n" }, "<leader>h", ":BufferLineCyclePrev<CR>", { noremap = true, silent = true })
-vim.keymap.set({ "n" }, "<leader>l", ":BufferLineCycleNext<CR>", { noremap = true, silent = true })
+vim.keymap.set({ "n" }, "<leader>h", "<cmd>BufferLineCyclePrev<CR>", {desc="Go's ahead in bufferline tabs", noremap = true, silent = true })
+vim.keymap.set({ "n" }, "<leader>l", "<cmd>BufferLineCycleNext<CR>", { desc="sway buffer in backwards direction",noremap = true, silent = true })
+vim.keymap.set({ "n" }, "<leader>ch", "<cmd>BufferLinePick<CR>", {desc="Toggle picker for bufferlines", noremap = true, silent = true })
 
 -- to check if a file exist or not
 function file_exists(filename)

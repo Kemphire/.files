@@ -64,9 +64,9 @@ set $menu exec wofi
 #          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
 #          before-sleep 'swaylock -f -c 000000 --image $(sh ~/Scripts/random_pic_swaylock.sh)'
 exec swayidle -w \
-    timeout 300 'swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0.2' \
+    timeout 300 'swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0.1' \
     timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-    before-sleep 'swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0.2'
+    before-sleep 'swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0.1'
 
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -260,7 +260,7 @@ exec --no-startup-id "$HOME/Scripts/random_wallpaper.sh"
 
 # to start apps on startup
 
-exec --no-startup-id "$HOME/Scripts/open_firefox.sh"
+# exec --no-startup-id "$HOME/Scripts/open_firefox.sh"
 
 # open terminal in scratchpad
 
@@ -288,11 +288,8 @@ bindsym --to-code $mod+x mode $exit
 
 bindsym $mod+o exec swaymsg exit
 
-
-gaps {
-	inner 10px
-	outer 2px
-}
+gaps inner 10
+gaps outer 2
 
 # allow mouse gestures 
 
@@ -327,7 +324,7 @@ client.urgent           $bg-urgent    $bg-urgent   $text          $bar $bar
 
 # swayfx specific configs
 shadows enable 
-shadow_color #896B00
+shadow_color #f96c3f
 smart_corner_radius enable
 corner_radius 10
 shadow_blur_radius 3
