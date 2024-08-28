@@ -15,6 +15,7 @@ return {
 				"javascript",
 				"typescript",
 				"html",
+				"htmldjango",
 				"css",
 				"json",
 				"yaml",
@@ -24,7 +25,7 @@ return {
 			},
 		})
 		vim.api.nvim_create_autocmd("FileType", {
-			pattern = "html",
+			pattern = {"htmldjango", "html"},
 			callback = function()
 				require("autoclose").setup({
 					keys = {

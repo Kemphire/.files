@@ -21,3 +21,5 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 		LineNumberColors()
 	end
 })
+
+

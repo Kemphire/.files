@@ -13,24 +13,11 @@ vim.cmd("set wildmenu")
 vim.opt.ignorecase = true
 vim.keymap.set("c", "<tab>", "<C-z>", { silent = false })
 vim.cmd("set nohlsearch")
-vim.cmd "colorscheme industry"
+-- vim.cmd("colorscheme industry")
 
--- for persistent code folding
-vim.api.nvim_create_autocmd({ "BufWinLeave" }, {
-	pattern = { "*.*" },
-	desc = "save view (folds), when closing file",
-	command = "mkview",
-})
-vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
-	pattern = { "*.*" },
-	desc = "load view (folds), when opening file",
-	command = "silent! loadview",
-})
+-- for increasing timeout limit for null-ls
+vim.lsp.buf.format({ timeout_ms = 2000 })
 
--- for easier motion in bufferline
-vim.keymap.set({ "n" }, "<leader>h", "<cmd>BufferLineCyclePrev<CR>", {desc="Go's ahead in bufferline tabs", noremap = true, silent = true })
-vim.keymap.set({ "n" }, "<leader>l", "<cmd>BufferLineCycleNext<CR>", { desc="sway buffer in backwards direction",noremap = true, silent = true })
-vim.keymap.set({ "n" }, "<leader>ch", "<cmd>BufferLinePick<CR>", {desc="Toggle picker for bufferlines", noremap = true, silent = true })
 
 -- to check if a file exist or not
 function file_exists(filename)
@@ -51,7 +38,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
 			if file_exists("session.vim") then
 				vim.cmd("source session.vim")
 			end
-		end, 500)  -- Delay in milliseconds
+		end, 500) -- Delay in milliseconds
 	end,
 })
 vim.api.nvim_create_autocmd("VimLeavePre", {

@@ -78,7 +78,7 @@ return {
 				},
 				hide_inactive_statusline = false,
 			})
-			-- vim.cmd("colorscheme eldritch")
+			vim.cmd("colorscheme eldritch")
 		end
 	},
 }

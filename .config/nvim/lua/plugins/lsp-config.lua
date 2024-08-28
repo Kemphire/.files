@@ -59,6 +59,9 @@ return {
 			lspconfig.texlab.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.jinja_lsp.setup({
+				capabilities=capabilities,
+			})
 			-- lspconfig.ccls.setup({
 			-- 	capabilities=capabilities,
 			-- 	on_attach = function (client, bufnr)
