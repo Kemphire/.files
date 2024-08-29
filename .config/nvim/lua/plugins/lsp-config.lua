@@ -9,8 +9,8 @@ return {
 			ensure_installed = {
 				"clang-format",
 				"latexindent",
-			}
-		}
+			},
+		},
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
@@ -27,6 +27,7 @@ return {
 					"emmet_language_server",
 					"cssls",
 					"texlab",
+					"ruff_lsp",
 				},
 				auto_install = true,
 			})
@@ -36,7 +37,8 @@ return {
 		"neovim/nvim-lspconfig",
 		lazy = false,
 		config = function()
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			local capabilities =
+				require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
@@ -50,8 +52,29 @@ return {
 			lspconfig.quick_lint_js.setup({
 				capabilities = capabilities,
 			})
+
+			-- hover in favour of pyright --
+			local on_attach = function(client, bufnr)
+				if client.name == "ruff_lsp" then
+					client.server_capabilities.hoverProvider = false
+				end
+			end
+			lspconfig.ruff_lsp.setup({
+				capabilities = capabilities,
+				on_attach = on_attach,
+			})
 			lspconfig.pyright.setup({
 				capabilities = capabilities,
+				settings = {
+					pyright = {
+						disableOrganizeImports = true,
+					},
+					python = {
+						analysis = {
+							ignore = { "*" },
+						},
+					},
+				},
 			})
 			lspconfig.emmet_language_server.setup({
 				capabilities = capabilities,
@@ -60,12 +83,13 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.jinja_lsp.setup({
-				capabilities=capabilities,
+				capabilities = capabilities,
+				filetypes = { "html", "htmldjango" },
 			})
 			-- lspconfig.ccls.setup({
 			-- 	capabilities=capabilities,
 			-- 	on_attach = function (client, bufnr)
-			-- 		
+			--
 			-- 	end,
 			-- 	flags = {
 			-- 		debounce_text_changes = 150,

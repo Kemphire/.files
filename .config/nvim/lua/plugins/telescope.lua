@@ -111,38 +111,6 @@ return {
 			{ noremap = true, silent = true, desc = "Fzf lsp code actions" }
 		)
 
-		-- for persistent code folding
-		vim.api.nvim_create_autocmd({ "BufWinLeave" }, {
-			pattern = { "*.*" },
-			desc = "save view (folds), when closing file",
-			command = "mkview",
-		})
-		vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
-			pattern = { "*.*" },
-			desc = "load view (folds), when opening file",
-			command = "silent! loadview",
-		})
-
-		-- for easier motion in bufferline
-		vim.keymap.set(
-			{ "n" },
-			"<leader>h",
-			"<cmd>BufferLineCyclePrev<CR>",
-			{ desc = "Go's ahead in bufferline tabs", noremap = true, silent = true }
-		)
-		vim.keymap.set(
-			{ "n" },
-			"<leader>l",
-			"<cmd>BufferLineCycleNext<CR>",
-			{ desc = "sway buffer in backwards direction", noremap = true, silent = true }
-		)
-		vim.keymap.set(
-			{ "n" },
-			"<leader>ch",
-			"<cmd>BufferLinePick<CR>",
-			{ desc = "Toggle picker for bufferlines", noremap = true, silent = true }
-		)
-
 		require("fzf-lua").setup({
 			winopts = {
 				backdrop = 70,
