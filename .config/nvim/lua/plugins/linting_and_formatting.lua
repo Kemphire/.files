@@ -32,11 +32,17 @@ return {
 				cpp = { "clang-format" },
 				javascript = { "prettier" },
 				bash = { "beautysh" },
-				-- tex = { "latexindent" },
+				tex = { "texfmt" },
+				css = { "prettier" },
 			},
 			format_on_save = {
 				timeout_ms = 2000,
 				lsp_format = "fallback",
+			},
+			formatters = {
+				texfmt = {
+					command = "$HOME/.cargo/bin/tex-fmt",
+				},
 			},
 		})
 	end,

@@ -15,9 +15,6 @@ vim.keymap.set("c", "<tab>", "<C-z>", { silent = false })
 vim.cmd("set nohlsearch")
 -- vim.cmd("colorscheme industry")
 
--- for increasing timeout limit for null-ls
-vim.lsp.buf.format({ timeout_ms = 6000 })
-
 -- for easier motion in bufferline
 vim.keymap.set(
 	{ "n" },
@@ -79,7 +76,3 @@ vim.api.nvim_create_autocmd("VimLeavePre", {
 		end
 	end,
 })
-
-
----- Lsp specific settings ----
-

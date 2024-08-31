@@ -34,7 +34,7 @@ return {
 					oil = true,
 				},
 			})
-			-- vim.cmd("colorscheme cyberdream")
+			vim.cmd("colorscheme cyberdream")
 		end,
 	},
 	{
@@ -51,7 +51,7 @@ return {
 			-- if Time_in_hour() > 7 and Time_in_hour() < 19 then
 			-- vim.cmd("colorscheme kanagawa-dragon")
 			-- else
-				-- vim.cmd("colorscheme kanagawa-dragon")
+			-- vim.cmd("colorscheme kanagawa-dragon")
 			-- end
 			--
 		end,
@@ -62,7 +62,7 @@ return {
 		priority = 1000,
 		opts = {},
 		init = function()
-			require "eldritch".setup({
+			require("eldritch").setup({
 				transparent = true, -- Enable this to disable setting the background color
 				terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
 				styles = {
@@ -78,7 +78,7 @@ return {
 				},
 				hide_inactive_statusline = false,
 			})
-			vim.cmd("colorscheme eldritch")
-		end
+			-- vim.cmd("colorscheme eldritch")
+		end,
 	},
 }
