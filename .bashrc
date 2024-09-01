@@ -15,4 +15,5 @@ test -s ~/.alias && . ~/.alias || true
 . "$HOME/.cargo/env"
 source "$HOME/.cargo/env"
 eval "$(starship init bash)"
-
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"

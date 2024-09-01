@@ -1,7 +1,7 @@
 return {
 	{
 		"williamboman/mason.nvim",
-		event = "BufWinEnter",
+		event = "VeryLazy",
 		config = function()
 			require("mason").setup()
 		end,
@@ -14,7 +14,7 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
-		event = "BufWinEnter",
+		event = "VeryLazy",
 		lazy = true,
 		config = function()
 			require("mason-lspconfig").setup({
@@ -35,7 +35,8 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
-		lazy = false,
+		-- lazy = false,
+		event = "VeryLazy",
 		config = function()
 			local capabilities =
 				require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())

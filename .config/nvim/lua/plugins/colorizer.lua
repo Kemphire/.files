@@ -1,19 +1,19 @@
 return {
 	"norcalli/nvim-colorizer.lua",
 	version = "*",
-	event = "BufRead",
-	config = function ()
-		require"colorizer".setup({
-			'css',
-			'javascript',
-			'swayconfig',
-			'jsonc',
-			'json',
-			'conf',
-			'lua',
+	event = "VeryLazy",
+	config = function()
+		require("colorizer").setup({
+			"css",
+			"javascript",
+			"swayconfig",
+			"jsonc",
+			"json",
+			"conf",
+			"lua",
 			html = {
 				mode = "foreground",
-			}
+			},
 		})
-	end
+	end,
 }

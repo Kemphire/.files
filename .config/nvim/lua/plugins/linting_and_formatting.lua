@@ -18,7 +18,7 @@ return {
 	-- 	vim.keymap.set("n", "<leader>fc", vim.lsp.buf.format, {})
 	-- end,
 	"stevearc/conform.nvim",
-	event = { "BufReadPre", "BufNewFile" },
+	event = "VeryLazy",
 	init = function()
 		local conform = require("conform")
 

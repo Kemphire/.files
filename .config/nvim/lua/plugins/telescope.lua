@@ -41,7 +41,7 @@
 return {
 	"ibhagwan/fzf-lua",
 	dependencies = { "nvim-tree/nvim-web-devicons", "nvim-lua/plenary.nvim" },
-	event = "VimEnter",
+	event = "VeryLazy",
 	config = function()
 		local builtins = require("fzf-lua")
 		vim.keymap.set(

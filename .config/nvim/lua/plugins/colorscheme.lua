@@ -5,11 +5,12 @@ end
 return {
 	{
 		"scottmckendry/cyberdream.nvim",
-		lazy = false,
-		priority = 1000,
+		-- lazy = false,
+		event = "VeryLazy",
+		-- priority = 1000,
 		init = function()
 			require("cyberdream").setup({
-				transparent = false,
+				transparent = true,
 				italic_comments = true,
 
 				-- Modern borderless telescope theme - also applies to fzf-lua
@@ -30,11 +31,11 @@ return {
 					cmp = true,
 					lazy = true,
 					treesitter = true,
+					fzflua = true,
 					alpha = true,
-					oil = true,
 				},
 			})
-			vim.cmd("colorscheme cyberdream")
+			-- vim.cmd("colorscheme cyberdream")
 		end,
 	},
 	{
@@ -58,8 +59,8 @@ return {
 	},
 	{
 		"eldritch-theme/eldritch.nvim",
-		lazy = false,
-		priority = 1000,
+		event = "VeryLazy",
+		-- priority = 1000,
 		opts = {},
 		init = function()
 			require("eldritch").setup({
