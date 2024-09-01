@@ -52,6 +52,12 @@ return {
 		)
 		vim.keymap.set(
 			"n",
+			"<leader>fh",
+			builtins.helptags,
+			{ noremap = true, silent = true, desc = "Help tags fzf search" }
+		)
+		vim.keymap.set(
+			"n",
 			"<leader>fg",
 			builtins.live_grep,
 			{ noremap = true, silent = true, desc = "Fzf file grepping" }
