@@ -112,7 +112,7 @@ return {
 		)
 		vim.keymap.set(
 			"n",
-			"<leader>ca",
+			"<leader>fca",
 			builtins.lsp_code_actions,
 			{ noremap = true, silent = true, desc = "Fzf lsp code actions" }
 		)

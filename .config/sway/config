@@ -290,6 +290,7 @@ bindsym $mod+o exec swaymsg exit
 
 gaps inner 10
 gaps outer 2
+smart_gaps on
 
 # allow mouse gestures 
 

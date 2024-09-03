@@ -103,9 +103,9 @@ return {
 			-- 	}
 			-- })
 
-			vim.keymap.set("n", "<leader>d", vim.lsp.buf.hover, {})
-			vim.keymap.set({ "v", "n" }, "<leader>gd", vim.lsp.buf.definition, {})
-			vim.keymap.set({ "v", "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
+			vim.keymap.set("n", "<leader>d", vim.lsp.buf.hover, { desc = "Lsp definatin popup" })
+			vim.keymap.set({ "v", "n" }, "<leader>gd", vim.lsp.buf.definition, { desc = "Lsp go to defination" })
+			vim.keymap.set({ "v", "n" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Lsp code action" })
 		end,
 	},
 }

@@ -13,7 +13,7 @@ vim.cmd("set wildmenu")
 vim.opt.ignorecase = true
 vim.keymap.set("c", "<tab>", "<C-z>", { silent = false })
 vim.cmd("set nohlsearch")
--- vim.cmd("colorscheme kanagawa")
+vim.cmd("colorscheme vim")
 
 -- for easier motion in bufferline
 vim.keymap.set(
