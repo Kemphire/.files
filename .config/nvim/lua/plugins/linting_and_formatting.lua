@@ -22,6 +22,7 @@ return {
 	init = function()
 		local conform = require("conform")
 
+		-- conform.formatters_by_ft.htmldjango = { "prettier" }
 		conform.setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
@@ -34,6 +35,7 @@ return {
 				bash = { "beautysh" },
 				tex = { "texfmt" },
 				css = { "prettier" },
+				htmldjango = { "djlint" },
 			},
 			format_on_save = {
 				timeout_ms = 2000,

@@ -35,7 +35,7 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
-		lazy = false,
+		lazy = true,
 		-- event = "VeryLazy",
 		config = function()
 			local capabilities =

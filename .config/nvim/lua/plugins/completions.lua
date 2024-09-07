@@ -13,7 +13,7 @@ return {
 	},
 	{
 		"hrsh7th/nvim-cmp",
-		event = "InsertEnter",
+		event = "VeryLazy",
 		lazy = true,
 		config = function()
 			local cmp = require("cmp")
@@ -38,8 +38,8 @@ return {
 					-- activate completions only when ctrl+n is pressed
 					-- if completions is already active then pressing ctrl+n will will select next suggestion
 
-					vim.api.nvim_set_keymap('i', '<C-Space>', '', { noremap = true, silent = true }),
-					vim.api.nvim_set_keymap('s', '<C-Space>', '', { noremap = true, silent = true }),
+					vim.api.nvim_set_keymap("i", "<C-Space>", "", { noremap = true, silent = true }),
+					vim.api.nvim_set_keymap("s", "<C-Space>", "", { noremap = true, silent = true }),
 					["<C-Space>"] = cmp.mapping(function(fallback)
 						if cmp.visible() then
 							cmp.select_next_item()
