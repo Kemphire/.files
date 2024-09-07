@@ -13,7 +13,7 @@ vim.cmd("set wildmenu")
 vim.opt.ignorecase = true
 vim.keymap.set("c", "<tab>", "<C-z>", { silent = false })
 vim.cmd("set nohlsearch")
-vim.cmd("colorscheme vim")
+-- vim.cmd("colorscheme default")
 
 -- for easier motion in bufferline
 vim.keymap.set(
@@ -76,3 +76,6 @@ vim.api.nvim_create_autocmd("VimLeavePre", {
 		end
 	end,
 })
+
+-- for obsidian nvim
+vim.opt_local.conceallevel = 2

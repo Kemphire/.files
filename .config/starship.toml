@@ -134,7 +134,7 @@ symbol = "🐍 "
 format = 'via [${symbol}python (${version} )(\($virtualenv\) )]($style)'
 style = "bold yellow"
 pyenv_prefix = "venv "
-python_binary = ["./venv/bin/python", "python", "python3", "python2"]
+python_binary = ["./.venv/bin/python","./venv/bin/python", "python", "python3", "python2"]
 detect_extensions = ["py"]
 version_format = "v${raw}"
 

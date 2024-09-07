@@ -2513,7 +2513,7 @@ background_opacity 0.5
 
 
 # BEGIN_KITTY_THEME
-# Base4Tone_Modern_N Dark
+# Fideloper
 include current-theme.conf
 # END_KITTY_THEME
 

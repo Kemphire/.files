@@ -1,0 +1,28 @@
+return {
+	-- "MeanderingProgrammer/render-markdown.nvim",
+	-- opts = {},
+	-- -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
+	-- -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
+	-- dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" }, -- if you prefer nvim-web-devicons
+	-- event = "VeryLazy",
+	-- ft = "markdown",
+	-- init = function()
+	-- 	require("render-markdown").setup({
+	-- 		enabled = true,
+	-- 		preset = "lazy",
+	-- 		render_modes = { "n", "v", "c" },
+	-- 		latex = {
+	-- 			-- Whether LaTeX should be rendered, mainly used for health check
+	-- 			enabled = true,
+	-- 			-- Executable used to convert latex formula to rendered unicode
+	-- 			converter = "latex2text",
+	-- 			-- Highlight for LaTeX blocks
+	-- 			highlight = "RenderMarkdownMath",
+	-- 			-- Amount of empty lines above LaTeX blocks
+	-- 			top_pad = 0,
+	-- 			-- Amount of empty lines below LaTeX blocks
+	-- 			bottom_pad = 0,
+	-- 		},
+	-- 	})
+	-- end,
+}
