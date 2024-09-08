@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export PYENV_ROOT:/home/hitmonlee/\x2epyenv
 SETUVAR Z_DATA_DIR:/home/hitmonlee/\x2elocal/share/z
 SETUVAR __fish_initialized:3400
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
@@ -7,7 +8,7 @@ SETUVAR _fisher_plugins:jorgebucaran/fisher
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:ff87ff
 SETUVAR fish_color_cancel:\x2d\x2dreverse
-SETUVAR fish_color_command:ff5f00
+SETUVAR fish_color_command:ffd700
 SETUVAR fish_color_comment:5C9900
 SETUVAR fish_color_cwd:green
 SETUVAR fish_color_cwd_root:red

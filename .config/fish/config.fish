@@ -42,6 +42,7 @@ abbr ga git add -A
 abbr gc git commit
 abbr gp git push
 abbr gch git checkout
+abbr lg lazygit
 
 
 # Set up fzf key bindings
@@ -52,3 +53,4 @@ set -x MANPAGER "nvim +Man!"
 
 # setting zoxide
 zoxide init fish | source
+

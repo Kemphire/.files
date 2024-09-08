@@ -35,8 +35,8 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
-		lazy = true,
-		-- event = "VeryLazy",
+		-- lazy = false,
+		event = "BufWinEnter",
 		config = function()
 			local capabilities =
 				require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())

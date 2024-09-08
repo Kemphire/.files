@@ -1,17 +1,18 @@
+local map = vim.keymap.set
 -- return {
 -- 	"nvim-telescope/telescope.nvim",
 -- 	tag = "0.1.6",
 -- 	dependencies = { "nvim-lua/plenary.nvim" },
 -- 	config = function()
 -- 		local builtin = require("telescope.builtin")
--- 		vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
--- 		vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
--- 		vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", { noremap = true, silent = true })
--- 		vim.keymap.set("n", "<leader>rg", builtin.registers, { noremap = true, silent = true })
+-- 		map("n", "<leader>ff", builtin.find_files, {})
+-- 		map("n", "<leader>fg", builtin.live_grep, {})
+-- 		map("n", "<leader>fb", ":Telescope buffers<CR>", { noremap = true, silent = true })
+-- 		map("n", "<leader>rg", builtin.registers, { noremap = true, silent = true })
 -- 		-- good practice to ues above args in {} or opts
--- 		vim.keymap.set("n", "<leader>th", ":Telescop colorscheme<CR>", { noremap = true, silent = true })
--- 		vim.keymap.set("n", "<leader>df", builtin.diagnostics, { noremap = true, silent = true })
--- 		vim.keymap.set("n", "<leader>tf", builtin.treesitter, { noremap = true, silent = true })
+-- 		map("n", "<leader>th", ":Telescop colorscheme<CR>", { noremap = true, silent = true })
+-- 		map("n", "<leader>df", builtin.diagnostics, { noremap = true, silent = true })
+-- 		map("n", "<leader>tf", builtin.treesitter, { noremap = true, silent = true })
 -- 		require("telescope").setup({
 -- 			pickers = {
 -- 				find_files = {
@@ -44,73 +45,38 @@ return {
 	event = "VeryLazy",
 	config = function()
 		local builtins = require("fzf-lua")
-		vim.keymap.set(
-			"n",
-			"<leader>ff",
-			builtins.files,
-			{ noremap = true, silent = true, desc = "Fzf file searching" }
-		)
-		vim.keymap.set(
-			"n",
-			"<leader>fh",
-			builtins.helptags,
-			{ noremap = true, silent = true, desc = "Help tags fzf search" }
-		)
-		vim.keymap.set(
-			"n",
-			"<leader>fg",
-			builtins.live_grep,
-			{ noremap = true, silent = true, desc = "Fzf file grepping" }
-		)
-		vim.keymap.set(
-			"n",
-			"<leader>rs",
-			builtins.resume,
-			{ noremap = true, silent = true, desc = "Fzf resume command" }
-		)
-		vim.keymap.set(
-			"n",
-			"<leader>fb",
-			builtins.buffers,
-			{ noremap = true, silent = true, desc = "Fzf open buffers list" }
-		)
-		vim.keymap.set(
-			"n",
-			"<leader>rg",
-			builtins.registers,
-			{ noremap = true, silent = true, desc = "Fzf open show contents" }
-		)
-		vim.keymap.set(
+		map("n", "<leader>ff", builtins.files, { noremap = true, silent = true, desc = "Fzf file searching" })
+		map("n", "<leader>fh", builtins.helptags, { noremap = true, silent = true, desc = "Help tags fzf search" })
+		map("n", "<leader>fg", builtins.live_grep, { noremap = true, silent = true, desc = "Fzf file grepping" })
+		map("n", "<leader>rs", builtins.resume, { noremap = true, silent = true, desc = "Fzf resume command" })
+		map("n", "<leader>fb", builtins.buffers, { noremap = true, silent = true, desc = "Fzf open buffers list" })
+		map("n", "<leader>rg", builtins.registers, { noremap = true, silent = true, desc = "Fzf open show contents" })
+		map(
 			"n",
 			"<leader>th",
 			builtins.colorschemes,
 			{ noremap = true, silent = true, desc = "Fzf colorschem previewer" }
 		)
-		vim.keymap.set(
+		map(
 			"n",
 			"<leader>nvc",
 			builtins.commands,
 			{ noremap = true, silent = true, desc = "Fzf neovim commands viewer" }
 		)
-		vim.keymap.set(
+		map(
 			"n",
 			"<leader>mn",
 			builtins.manpages,
 			{ noremap = true, silent = true, desc = "Shortucut to view manpages" }
 		)
-		vim.keymap.set(
+		map(
 			"n",
 			"<leader>df",
 			builtins.diagnostics_document,
 			{ noremap = true, silent = true, desc = "Fzf diagnostics viewer" }
 		)
-		vim.keymap.set(
-			"n",
-			"<leader>def",
-			builtins.lsp_definitions,
-			{ noremap = true, silent = true, desc = "Fzf lsp viewer" }
-		)
-		vim.keymap.set(
+		map("n", "<leader>def", builtins.lsp_definitions, { noremap = true, silent = true, desc = "Fzf lsp viewer" })
+		map(
 			"n",
 			"<leader>fca",
 			builtins.lsp_code_actions,

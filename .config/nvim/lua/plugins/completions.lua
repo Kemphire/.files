@@ -13,7 +13,6 @@ return {
 	},
 	{
 		"hrsh7th/nvim-cmp",
-		event = "VeryLazy",
 		lazy = true,
 		config = function()
 			local cmp = require("cmp")
