@@ -53,3 +53,22 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 		LineNumberColors()
 	end,
 })
+
+-- for hiding status line when not in cmd mode
+local function hide_cmd()
+	vim.cmd("set cmdheight=0")
+end
+
+local function show_cmd()
+	vim.cmd("set cmdheight=1")
+end
+
+vim.api.nvim_create_autocmd("CmdlineEnter", {
+	pattern = "*",
+	callback = show_cmd,
+})
+
+vim.api.nvim_create_autocmd("CmdlineLeave", {
+	pattern = "*",
+	callback = hide_cmd,
+})
