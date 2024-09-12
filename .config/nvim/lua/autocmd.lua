@@ -57,7 +57,11 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 -- for hiding status line when not in cmd mode
 local function hide_cmd()
 	local cmd_type = vim.fn.getcmdtype()
-	if cmd_type ~= "/" and cmd_type ~= "?" then
+	if cmd_type == "/" or cmd_type == "?" then
+		vim.defer_fn(function()
+			vim.cmd("set cmdheight=0")
+		end, 2000)
+	else
 		vim.cmd("set cmdheight=0")
 	end
 end
