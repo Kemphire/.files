@@ -43,6 +43,7 @@ abbr gc git commit
 abbr gp git push
 abbr gch git checkout
 abbr lg lazygit
+abbr dc docker-compose
 
 
 # Set up fzf key bindings

@@ -1,5 +1,5 @@
 [plugin]
-deps = []
+deps = [{ use = "Reledia/miller", commit = "40e0265" }, { use = "Reledia/glow", commit = "4e016fa" }, { use = "AnirudhG07/nbpreview", commit = "52a14b3" }]
 
 [flavor]
 deps = [{ use = "dangooddd/kanagawa", commit = "b32f205" }]

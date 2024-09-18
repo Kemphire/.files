@@ -7,8 +7,8 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 exec waybar
 
 # start notification daemon
-exec --no-startup-id mako
-
+# exec --no-startup-id mako
+exec --no-startup-id swaync
 # start kde-connect
 exec --no-startup-id /usr/lib/kdeconnectd
 
