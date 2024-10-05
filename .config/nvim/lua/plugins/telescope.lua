@@ -87,6 +87,10 @@ return {
 			winopts = {
 				backdrop = 70,
 			},
+			fzf_colors = true,
+			defaults = {
+				file_icons = false,
+			},
 		})
 	end,
 }
