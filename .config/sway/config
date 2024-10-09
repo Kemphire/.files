@@ -40,7 +40,7 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu exec wofi 
+set $menu exec fuzzel 
 # it is set in config.d/50-openSUSE.conf
 
 ### Output configuration
@@ -346,6 +346,7 @@ dim_inactive_window 0.2
 blur_xray enable
 
 layer_effects "wofi" blur enable; shadows disable; corner_radius 13
+layer_effects "fuzzel" blur enable; shadows enable; corner_radius 13
 layer_effects "waybar" blur enable; shadows disable
 
 # for cursor size
