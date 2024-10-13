@@ -28,6 +28,7 @@ return {
 					"cssls",
 					"texlab",
 					"ruff_lsp",
+					"taplo",
 				},
 				auto_install = true,
 			})
@@ -106,6 +107,9 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.texlab.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.taplo.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.jinja_lsp.setup({
