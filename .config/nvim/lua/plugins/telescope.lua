@@ -43,6 +43,7 @@ return {
 	"ibhagwan/fzf-lua",
 	dependencies = { "nvim-tree/nvim-web-devicons", "nvim-lua/plenary.nvim" },
 	event = "VeryLazy",
+	lazy = true,
 	config = function()
 		local builtins = require("fzf-lua")
 		map("n", "<leader>ff", builtins.files, { noremap = true, silent = true, desc = "Fzf file searching" })

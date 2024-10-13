@@ -54,28 +54,29 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 	end,
 })
 
+-- don't use it while using noice.nvim
 -- for hiding status line when not in cmd mode
-local function hide_cmd()
-	local cmd_type = vim.fn.getcmdtype()
-	if cmd_type == "/" or cmd_type == "?" then
-		vim.defer_fn(function()
-			vim.cmd("set cmdheight=0")
-		end, 2000)
-	else
-		vim.cmd("set cmdheight=0")
-	end
-end
-
-local function show_cmd()
-	vim.cmd("set cmdheight=1")
-end
-
-vim.api.nvim_create_autocmd("CmdlineEnter", {
-	pattern = "*",
-	callback = show_cmd,
-})
-
-vim.api.nvim_create_autocmd("CmdlineLeave", {
-	pattern = "*",
-	callback = hide_cmd,
-})
+-- local function hide_cmd()
+-- 	local cmd_type = vim.fn.getcmdtype()
+-- 	if cmd_type == "/" or cmd_type == "?" then
+-- 		vim.defer_fn(function()
+-- 			vim.cmd("set cmdheight=0")
+-- 		end, 2000)
+-- 	else
+-- 		vim.cmd("set cmdheight=0")
+-- 	end
+-- end
+--
+-- local function show_cmd()
+-- 	vim.cmd("set cmdheight=1")
+-- end
+--
+-- vim.api.nvim_create_autocmd("CmdlineEnter", {
+-- 	pattern = "*",
+-- 	callback = show_cmd,
+-- })
+--
+-- vim.api.nvim_create_autocmd("CmdlineLeave", {
+-- 	pattern = "*",
+-- 	callback = hide_cmd,
+-- })
