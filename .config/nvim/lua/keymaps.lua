@@ -30,6 +30,14 @@ map(
 
 map({ "n" }, "<C-s>", "<cmd>wa<CR>", { desc = "Save all the opened buffer", noremap = true, silent = true })
 
+-- to show cmd line when entring in macro
+map("n", "q", function()
+	vim.cmd("set cmdheight=1")
+end, { noremap = true, silent = true })
+map("n", "q", function()
+	vim.cmd("set cmdheight=0")
+end, { noremap = true, silent = true })
+
 --- keymaps for Fzf-lua
 -- local builtins = require("fzf-lua")
 -- map("n", "<leader>ff", builtins.files, { noremap = true, silent = true, desc = "Fzf file searching" })
