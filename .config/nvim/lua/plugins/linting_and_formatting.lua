@@ -31,10 +31,11 @@ return {
 				-- htmldjango = { "djlint" },
 				c = { "clang-format" },
 				cpp = { "clang-format" },
-				javascript = { "prettier" },
+				javascript = { "biome" },
+				jsonc = { "biome" },
 				bash = { "beautysh" },
 				tex = { "texfmt" },
-				css = { "prettier" },
+				css = { "biome" },
 				htmldjango = { "djlint" },
 			},
 			format_on_save = {

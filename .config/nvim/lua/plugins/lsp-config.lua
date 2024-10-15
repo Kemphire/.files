@@ -9,6 +9,7 @@ return {
 			ensure_installed = {
 				"clang-format",
 				"latexindent",
+				"biome",
 			},
 		},
 	},
@@ -29,6 +30,7 @@ return {
 					"texlab",
 					"ruff_lsp",
 					"taplo",
+					"biome",
 				},
 				auto_install = true,
 			})
