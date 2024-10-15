@@ -256,9 +256,6 @@ bindsym $mod+r mode "resizer
 #}
 
 
-# to take screenshots
-
-bindsym --no-repeat $mod+shift+s exec "$HOME/Scripts/screenshots.sh" 
 
 # for wallpaper management
 bindsym $mod+shift+w exec "$HOME/Scripts/random_wallpaper.sh"
@@ -299,6 +296,20 @@ bindsym $mod+o exec swaymsg exit
 gaps inner 10
 gaps outer 2
 smart_gaps on
+
+set $record "What do you wanna do: [s]reenshot, [r]recording, [f]ull_record, [c]lose record"
+mode $record {
+    bindsym --to-code {
+        s exec "$HOME/Scripts/screenshots.sh",mode "default",
+        r exec "$HOME/Scripts/scr_recording.sh",mode "default",
+        f exec "$HOME/Scripts/scr_recording_full.sh",mode "default",
+        c exec "pkill -SIGINT wf-recorder", mode "default",
+        Return mode,
+        Escape mode,
+        $mod+y mode
+    }
+}
+bindsym --to-code $mod+y mode $record
 
 # allow mouse gestures 
 
