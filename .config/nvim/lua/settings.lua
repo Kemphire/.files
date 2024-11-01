@@ -9,5 +9,6 @@ vim.cmd("set ruler")
 -- for popmenu transparency
 vim.opt.pumblend = 30
 
-vim.g.loaded_netrwPlugin = false
+-- vim.g.loaded_netrwPlugin = false
+-- vim.g.loaded_netrw = false
 -- vim.cmd("colorscheme cyberdream")

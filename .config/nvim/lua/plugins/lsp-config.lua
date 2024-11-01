@@ -55,6 +55,9 @@ return {
 			lspconfig.quick_lint_js.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.texlab.setup({
+				capabilities = capabilities,
+			})
 
 			-- hover in favour of pyright --
 			local on_attach = function(client, bufnr)
