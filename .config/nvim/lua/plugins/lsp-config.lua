@@ -42,6 +42,7 @@ return {
 		config = function()
 			local capabilities =
 				require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+			-- require("blink.cmp").get_lsp_capabilities(config.capabilities)
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
@@ -56,6 +57,9 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.texlab.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.zls.setup({
 				capabilities = capabilities,
 			})
 
@@ -142,4 +146,76 @@ return {
 			vim.keymap.set({ "v", "n" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Lsp code action" })
 		end,
 	},
+	-- {
+	-- 	"neovim/nvim-lspconfig",
+	-- 	dependencies = { "saghen/blink.cmp" },
+	-- 	config = function(_, opts)
+	-- 		local capabilities = require("blink.cmp").get_lsp_capabilities(
+	-- 			require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+	-- 		)
+	-- 		local lspconfig = require("lspconfig")
+	--
+	-- 		-- Define server configurations
+	-- 		local servers = {
+	-- 			lua_ls = {},
+	-- 			html = {},
+	-- 			clangd = {},
+	-- 			quick_lint_js = {},
+	-- 			texlab = {},
+	-- 			ruff_lsp = {
+	-- 				on_attach = function(client, _)
+	-- 					if client.name == "ruff_lsp" then
+	-- 						client.server_capabilities.hoverProvider = false
+	-- 					end
+	-- 				end,
+	-- 			},
+	-- 			pyright = {
+	-- 				settings = {
+	-- 					pyright = { disableOrganizeImports = true },
+	-- 					python = {
+	-- 						analysis = { ignore = { "*" } },
+	-- 					},
+	-- 				},
+	-- 				before_init = function(_, config)
+	-- 					local util = require("lspconfig.util")
+	-- 					local path = util.path
+	-- 					local function get_python_path(workspace)
+	-- 						if vim.env.VIRTUAL_ENV then
+	-- 							return path.join(vim.env.VIRTUAL_ENV, "bin", "python")
+	-- 						end
+	-- 						for _, pattern in ipairs({ "*", ".*" }) do
+	-- 							local match = vim.fn.glob(path.join(workspace, pattern, "pyvenv.cfg"))
+	-- 							if match ~= "" then
+	-- 								return path.join(path.dirname(match), "bin", "python")
+	-- 							end
+	-- 						end
+	-- 						return util.exepath("python3") or util.exepath("python") or "python"
+	-- 					end
+	-- 					config.settings.python.pythonPath = get_python_path(config.root_dir)
+	-- 				end,
+	-- 			},
+	-- 			emmet_language_server = {},
+	-- 			taplo = {},
+	-- 			jinja_lsp = {
+	-- 				filetypes = { "html", "htmldjango" },
+	-- 			},
+	-- 		}
+	--
+	-- 		-- Apply configurations to each server
+	-- 		for server, config in pairs(servers) do
+	-- 			config.capabilities = capabilities
+	-- 			lspconfig[server].setup(config)
+	-- 		end
+	--
+	-- 		-- Key mappings for LSP actions
+	-- 		vim.keymap.set("n", "<leader>d", vim.lsp.buf.hover, { desc = "LSP definition popup" })
+	-- 		vim.keymap.set({ "v", "n" }, "<leader>gd", vim.lsp.buf.definition, { desc = "LSP go to definition" })
+	-- 		vim.keymap.set({ "v", "n" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP code action" })
+	-- 	end,
+	-- 	opts = {
+	-- 		servers = {
+	-- 			-- Add additional server configurations if needed
+	-- 		},
+	-- 	},
+	-- },
 }

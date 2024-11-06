@@ -84,8 +84,15 @@ exec swayidle -w \
   #     middle_emulation enabled
   # }
 
+# this no longer works
+# input "10182:480:DELL09EC:00_27C6:01E0_Touchpad" {
+# 	dwt enabled
+# 	tap enabled
+# 	natural_scroll disabled
+# 	middle_emulation enabled
+# }
 # this is the correct config
-input "10182:480:DELL09EC:00_27C6:01E0_Touchpad" {
+input "10182:480:DELL09EC:00_27C6:01E0" {
 	dwt enabled
 	tap enabled
 	natural_scroll disabled

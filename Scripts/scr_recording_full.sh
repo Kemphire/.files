@@ -3,7 +3,7 @@
 # Get the current date and time in the format YYYY-MM-DD_HH-MM-SS
 current_time=$(date +"%Y-%m-%d_%H-%M-%S")
 
-directory=~/Pictures/screen_recordings
+directory=~/Videos/screen_recordings
 
 mkdir -p $directory
 
