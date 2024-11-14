@@ -9,8 +9,8 @@ TYPE="simple"
 DURATION=3
 
 # wofi window config (in %)
-WIDTH=50
-HEIGHT=30
+WIDTH=100
+HEIGHT=60
 
 SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION"
 
