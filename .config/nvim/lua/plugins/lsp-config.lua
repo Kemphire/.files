@@ -28,7 +28,7 @@ return {
 					"emmet_language_server",
 					"cssls",
 					"texlab",
-					"ruff_lsp",
+					"ruff",
 					"taplo",
 					"biome",
 				},
