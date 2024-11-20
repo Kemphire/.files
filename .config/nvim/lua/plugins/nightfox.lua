@@ -23,6 +23,6 @@ return {
 		--     vim.cmd("colorscheme carbonfox")
 		-- end
 		-- modified on -> 2024-08-18
-		vim.cmd("colorscheme terafox")
+		-- vim.cmd("colorscheme terafox")
 	end,
 }

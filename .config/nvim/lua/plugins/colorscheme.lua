@@ -82,20 +82,21 @@ return {
 		-- 	vim.cmd("colorscheme eldritch")
 		-- end,
 	},
-	-- {
-	-- 	"0xstepit/flow.nvim",
-	-- 	event = "VeryLazy",
-	-- 	-- lazy = true,
-	-- 	-- priority = 1000,
-	-- 	opts = {},
-	-- 	config = function()
-	-- 		require("flow").setup({
-	-- 			transparent = true,
-	-- 			fluo_color = "green",
-	-- 			mode = "normal",
-	-- 			aggressive_spell = false,
-	-- 		})
-	-- 		vim.cmd("colorscheme flow")
-	-- 	end,
-	-- },
+	{
+		"0xstepit/flow.nvim",
+		event = "VeryLazy",
+		-- lazy = true,
+		priority = 1000,
+		opts = {},
+		config = function()
+			require("flow").setup({
+				transparent = true,
+				fluo_color = "pink",
+				dark_theme = true,
+				mode = "desaturate",
+				aggressive_spell = false,
+			})
+			vim.cmd("colorscheme flow")
+		end,
+	},
 }

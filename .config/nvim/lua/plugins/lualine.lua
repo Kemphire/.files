@@ -1,19 +1,19 @@
 return {
-	"nvim-lualine/lualine.nvim",
-	dependencies = { "nvim-tree/nvim-web-devicons" },
-	event = "VeryLazy",
-	-- lazy = false,
-	config = function()
-		require("lualine").setup({
-			options = {
-				theme = "auto",
-				"filename",
-				file_status = true,
-				path = 1,
-				icons_enabled = true,
-			},
-		})
-	end,
+	-- 	"nvim-lualine/lualine.nvim",
+	-- 	dependencies = { "nvim-tree/nvim-web-devicons" },
+	-- 	event = "VeryLazy",
+	-- 	-- lazy = false,
+	-- 	config = function()
+	-- 		require("lualine").setup({
+	-- 			options = {
+	-- 				theme = "auto",
+	-- 				"filename",
+	-- 				file_status = true,
+	-- 				path = 1,
+	-- 				icons_enabled = true,
+	-- 			},
+	-- 		})
+	-- 	end,
 	-- "echasnovski/mini.statusline",
 	-- version = false,
 	-- event = "VeryLazy",

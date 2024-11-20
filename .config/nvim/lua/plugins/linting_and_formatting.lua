@@ -26,7 +26,7 @@ return {
 		conform.setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
-				python = { "ruff", "ruff_format", "ruff_fix" },
+				python = { "ruff_format", "ruff_fix" },
 				html = { "htmlbeautifier" },
 				-- htmldjango = { "djlint" },
 				c = { "clang-format" },

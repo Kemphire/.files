@@ -64,15 +64,16 @@ return {
 			})
 
 			-- hover in favour of pyright --
-			local on_attach = function(client, bufnr)
-				if client.name == "ruff" then
-					client.server_capabilities.hoverProvider = false
-				end
-			end
-			lspconfig.ruff.setup({
-				capabilities = capabilities,
-				on_attach = on_attach,
-			})
+			-- local on_attach = function(client, bufnr)
+			-- 	if client.name == "ruff" then
+			-- 		client.server_capabilities.hoverProvider = false
+			-- 	end
+			-- end
+			-- lspconfig.ruff.setup({
+			-- 	capabilities = capabilities,
+			-- 	on_attach = on_attach,
+			-- })
+
 			-- pyright setup to detect virtualenv's
 			local configs = require("lspconfig/configs")
 			local util = require("lspconfig/util")
