@@ -35,7 +35,7 @@ return {
 		-- 			alpha = true,
 		-- 		},
 		-- 	})
-		-- 	-- vim.cmd("colorscheme cyberdream")
+		-- 	vim.cmd("colorscheme cyberdream")
 		-- end,
 	},
 	{
@@ -85,12 +85,12 @@ return {
 	{
 		"0xstepit/flow.nvim",
 		event = "VeryLazy",
-		-- lazy = true,
+		lazy = false,
 		priority = 1000,
 		opts = {},
 		config = function()
 			require("flow").setup({
-				transparent = true,
+				transparent = false,
 				fluo_color = "pink",
 				dark_theme = true,
 				mode = "desaturate",

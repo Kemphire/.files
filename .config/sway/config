@@ -353,7 +353,7 @@ client.urgent           $bg-urgent    $bg-urgent   $text          $bar $bar
 shadows enable 
 shadow_color #f96c3f
 smart_corner_radius enable
-corner_radius 10
+corner_radius 5
 shadow_blur_radius 3
 blur enable
 blur_radius 3
