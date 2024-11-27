@@ -35,6 +35,7 @@ return {
 				prompt_prefix = "🔍  ",
 				selection_caret = " ",
 				winblend = 40,
+				layout_strategy = "flex",
 				mappings = {
 					i = {
 						["<C-n>"] = require("telescope.actions").move_selection_next,
