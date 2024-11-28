@@ -36,16 +36,16 @@ return {
 				selection_caret = " ",
 				winblend = 40,
 				layout_strategy = "flex",
-				mappings = {
-					i = {
-						["<C-n>"] = require("telescope.actions").move_selection_next,
-						["<C-p>"] = require("telescope.actions").move_selection_previous,
-					},
-					n = {
-						["<C-n>"] = require("telescope.actions").move_selection_next,
-						["<C-p>"] = require("telescope.actions").move_selection_previous,
-					},
-				},
+				-- mappings = {
+				-- 	i = {
+				-- 		["<C-n>"] = require("telescope.actions").move_selection_next,
+				-- 		["<C-p>"] = require("telescope.actions").move_selection_previous,
+				-- 	},
+				-- 	n = {
+				-- 		["<C-n>"] = require("telescope.actions").move_selection_next,
+				-- 		["<C-p>"] = require("telescope.actions").move_selection_previous,
+				-- 	},
+				-- },
 			},
 		})
 	end,
