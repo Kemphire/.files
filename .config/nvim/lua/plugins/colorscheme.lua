@@ -90,7 +90,7 @@ return {
 		opts = {},
 		config = function()
 			require("flow").setup({
-				transparent = false,
+				transparent = true,
 				fluo_color = "pink",
 				dark_theme = true,
 				mode = "desaturate",

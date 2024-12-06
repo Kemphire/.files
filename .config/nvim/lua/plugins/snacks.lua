@@ -16,7 +16,7 @@ return {
 					cmd = "pokemon-colorscripts --name hitmonchan --no-title; sleep .1",
 					random = 10,
 					pane = 2,
-					indent = 4,
+					indent = 15,
 					height = 30,
 				},
 			},
