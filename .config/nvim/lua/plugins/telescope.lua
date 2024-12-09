@@ -25,11 +25,11 @@ return {
 		)
 		map("n", "<leader>tf", builtin.treesitter, { noremap = true, silent = true })
 		require("telescope").setup({
-			-- pickers = {
-			find_files = {
-				hidden = true,
+			pickers = {
+				find_files = {
+					hidden = true,
+				},
 			},
-			-- },
 			defaults = {
 				prompt_prefix = "🔍  ",
 				selection_caret = " ",
