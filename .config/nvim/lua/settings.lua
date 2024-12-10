@@ -12,4 +12,4 @@ vim.o.shell = "/usr/bin/bash"
 
 -- vim.g.loaded_netrwPlugin = false
 -- vim.g.loaded_netrw = false
--- vim.cmd("colorscheme cyberdream")
+vim.cmd("colorscheme murphy")
