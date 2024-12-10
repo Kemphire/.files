@@ -3,7 +3,7 @@ return {
 	"nvim-telescope/telescope.nvim",
 	tag = "0.1.6",
 	event = "VeryLazy",
-	dependencies = { "nvim-lua/plenary.nvim" },
+	dependencies = { "nvim-lua/plenary.nvim", { "nvim-telescope/telescope-fzf-native.nvim", build = "make" } },
 	config = function()
 		local builtin = require("telescope.builtin")
 		map("n", "<leader>ff", builtin.find_files, { desc = "Find files telescope", noremap = true, silent = true })
@@ -28,6 +28,7 @@ return {
 			pickers = {
 				find_files = {
 					hidden = true,
+					theme = "ivy",
 				},
 			},
 			defaults = {

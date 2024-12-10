@@ -108,7 +108,8 @@ return {
 					},
 					python = {
 						analysis = {
-							ignore = { "*" },
+							-- ignore = { "*" },
+							ignore = {},
 						},
 					},
 				},
