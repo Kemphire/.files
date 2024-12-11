@@ -13,7 +13,7 @@ return {
 				{ section = "startup" },
 				{
 					section = "terminal",
-					cmd = "pokemon-colorscripts --name hitmonchan --no-title; sleep .1",
+					cmd = "pokemon-colorscripts --name sigilyph --no-title; sleep .1",
 					random = 10,
 					pane = 2,
 					indent = 15,
