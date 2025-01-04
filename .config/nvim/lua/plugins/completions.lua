@@ -139,6 +139,7 @@ return {
 		opts = {
 			keymap = {
 				preset = "default",
+				["<C-Space>"] = { "show" }, -- Use Ctrl+Space to trigger completion
 				["<Tab>"] = {
 					function(cmp)
 						if cmp.snippet_active() then

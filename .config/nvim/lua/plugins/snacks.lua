@@ -25,7 +25,7 @@ return {
 			},
 		},
 		notifier = {
-			enabled = true,
+			enabled = false,
 			timeout = 3000,
 		},
 		quickfile = { enabled = true },
