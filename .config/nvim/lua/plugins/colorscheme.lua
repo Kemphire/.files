@@ -4,39 +4,39 @@ end
 
 return {
 	{
-		-- "scottmckendry/cyberdream.nvim",
-		-- -- lazy = false,
-		-- event = "VeryLazy",
-		-- -- priority = 1000,
-		-- init = function()
-		-- 	require("cyberdream").setup({
-		-- 		transparent = true,
-		-- 		italic_comments = true,
-		--
-		-- 		-- Modern borderless telescope theme - also applies to fzf-lua
-		-- 		borderless_telescope = true,
-		--
-		-- 		-- Set terminal colors used in `:terminal`
-		-- 		terminal_colors = true,
-		-- 		cache = true,
-		--
-		-- 		theme = {
-		-- 			variant = "auto",
-		-- 			colors = {},
-		-- 			highlights = {},
-		-- 		},
-		-- 		-- Disable or enable colorscheme extensions
-		-- 		extensions = {
-		-- 			telescope = true,
-		-- 			cmp = true,
-		-- 			lazy = true,
-		-- 			treesitter = true,
-		-- 			fzflua = true,
-		-- 			alpha = true,
-		-- 		},
-		-- 	})
-		-- 	vim.cmd("colorscheme cyberdream")
-		-- end,
+		"scottmckendry/cyberdream.nvim",
+		-- lazy = false,
+		event = "VeryLazy",
+		-- priority = 1000,
+		init = function()
+			require("cyberdream").setup({
+				transparent = true,
+				italic_comments = true,
+
+				-- Modern borderless telescope theme - also applies to fzf-lua
+				borderless_telescope = true,
+
+				-- Set terminal colors used in `:terminal`
+				terminal_colors = true,
+				cache = true,
+
+				theme = {
+					variant = "auto",
+					colors = {},
+					highlights = {},
+				},
+				-- Disable or enable colorscheme extensions
+				extensions = {
+					telescope = true,
+					cmp = true,
+					lazy = true,
+					treesitter = true,
+					fzflua = true,
+					alpha = true,
+				},
+			})
+			vim.cmd("colorscheme cyberdream")
+		end,
 	},
 	{
 		-- "rebelot/kanagawa.nvim",
@@ -63,7 +63,7 @@ return {
 		-- event = "VeryLazy",
 		-- -- priority = 1000,
 		-- opts = {
-		-- 	transparent = false, -- Enable this to disable setting the background color
+		-- 	transparent = true, -- Enable this to disable setting the background color
 		-- 	terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
 		-- 	styles = {
 		-- 		-- Style to be applied to different syntax groups
@@ -82,29 +82,29 @@ return {
 		-- 	vim.cmd("colorscheme eldritch")
 		-- end,
 	},
-	{
-		"0xstepit/flow.nvim",
-		lazy = false,
-		priority = 1000,
-		tag = "v1.0.0",
-		opts = {
-			theme = {
-				style = "dark", --  "dark" | "light"
-				contrast = "default", -- "default" | "high"
-				transparent = true, -- true | false
-			},
-			colors = {
-				mode = "default", -- "default" | "dark" | "light"
-				fluo = "green", -- "pink" | "cyan" | "yellow" | "orange" | "green"
-			},
-			ui = {
-				borders = "inverse", -- "theme" | "inverse" | "fluo" | "none"
-				aggressive_spell = false, -- true | false
-			},
-		},
-		config = function(_, opts)
-			require("flow").setup(opts)
-			vim.cmd("colorscheme flow")
-		end,
-	},
+	-- {
+	-- 	"0xstepit/flow.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	tag = "v1.0.0",
+	-- 	opts = {
+	-- 		theme = {
+	-- 			style = "dark", --  "dark" | "light"
+	-- 			contrast = "default", -- "default" | "high"
+	-- 			transparent = true, -- true | false
+	-- 		},
+	-- 		colors = {
+	-- 			mode = "light", -- "default" | "dark" | "light"
+	-- 			fluo = "orange", -- "pink" | "cyan" | "yellow" | "orange" | "green"
+	-- 		},
+	-- 		ui = {
+	-- 			borders = "inverse", -- "theme" | "inverse" | "fluo" | "none"
+	-- 			aggressive_spell = false, -- true | false
+	-- 		},
+	-- 	},
+	-- 	config = function(_, opts)
+	-- 		require("flow").setup(opts)
+	-- 		vim.cmd("colorscheme flow")
+	-- 	end,
+	-- },
 }
