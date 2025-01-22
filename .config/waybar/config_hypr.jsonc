@@ -86,7 +86,7 @@
 		"format": "{}  ",
 		"tooltip": true,
 		"tooltip-format": "Open Browser",
-		"on-click": "sleep 0.1 && brave-browser --password-store=kwallet6",
+		"on-click": "sleep 0.1 && vivaldi --password-store=kwallet6",
 		"on-click-right": "sleep 0.1 && librewolf"
 	},
 	"custom/power": {
