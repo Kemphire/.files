@@ -27,6 +27,7 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				python = { "ruff_format", "ruff_fix" },
+				go = { "goimports", "gofmt" },
 				html = { "htmlbeautifier" },
 				-- htmldjango = { "djlint" },
 				c = { "clang-format" },

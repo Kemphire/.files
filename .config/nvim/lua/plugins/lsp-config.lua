@@ -261,6 +261,17 @@ return {
 				zls = {},
 				emmet_language_server = {},
 				taplo = {},
+				gopls = {
+					settings = {
+						gopls = {
+							analyses = {
+								unusedparams = true,
+							},
+							staticcheck = true,
+							gofumpt = true,
+						},
+					},
+				},
 				jinja_lsp = {
 					filetypes = { "html", "htmldjango" },
 				},
