@@ -1,6 +1,7 @@
 if status is-interactive
 	function fish_greeting
-		colorscript -r
+		# colorscript -r
+		pokemon-colorscripts -r -b 
 	end
 end
 
@@ -64,3 +65,7 @@ zoxide init fish | source
 # This section can be safely removed at any time if needed.
 test -r '/home/hitmonlee/.opam/opam-init/init.fish' && source '/home/hitmonlee/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
 # END opam configuration
+
+
+# flutter path set
+set -x PATH /home/hitmonlee/sdk_flutter/flutter/bin/ $PATH

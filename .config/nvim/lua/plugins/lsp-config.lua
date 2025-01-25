@@ -261,6 +261,9 @@ return {
 				zls = {},
 				emmet_language_server = {},
 				taplo = {},
+				dartls = {
+					cmd = { "dart", "language-server", "--protocol=lsp" },
+				},
 				gopls = {
 					settings = {
 						gopls = {
