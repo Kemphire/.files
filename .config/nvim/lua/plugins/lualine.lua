@@ -1,19 +1,19 @@
 local default_icon = "█ "
 local mode_map = {
-	-- ['NORMAL']     = '󰘳 ',
-	-- ['O-PENDING']  = ' ',
-	-- ['INSERT']     = ' ',
-	-- ['VISUAL']     = '󰒉 ',
-	-- ['V-BLOCK']    = '󰒉 ',
-	-- ['V-LINE']     = '󰒉 ',
-	-- ['V-REPLACE']  = ' ',
-	-- ['REPLACE']    = '󰬳 ',
-	-- ['COMMAND']    = '󰘳 ',
-	-- ['SHELL']      = ' ',
-	-- ['TERMINAL']   = ' ',
-	-- ['SELECT']     = ' ',
-	-- ['CONFIRM']    = ' ',
-	-- ['MORE']       = '󰍻 ',
+	["NORMAL"] = "󰘳 ",
+	["O-PENDING"] = " ",
+	["INSERT"] = " ",
+	["VISUAL"] = "󰒉 ",
+	["V-BLOCK"] = "󰒉 ",
+	["V-LINE"] = "󰒉 ",
+	["V-REPLACE"] = " ",
+	["REPLACE"] = "󰬳 ",
+	["COMMAND"] = "󰘳 ",
+	["SHELL"] = " ",
+	["TERMINAL"] = " ",
+	["SELECT"] = " ",
+	["CONFIRM"] = " ",
+	["MORE"] = "󰍻 ",
 }
 
 local branch = {
@@ -180,6 +180,7 @@ return {
 				lualine_c = {
 					diff,
 					diagnostics,
+					filename,
 				},
 				lualine_x = {
 					{
@@ -212,7 +213,7 @@ return {
 				"lazy",
 				"quickfix",
 				createExtention("help"),
-				createExtention("minifiles", { mode }, { branch }),
+				createExtention("yazi", { mode }, { branch }),
 				createExtention("ministarter", { mode }, { branch }),
 				createExtention("lazygit"),
 				createExtention("TelescopePrompt", { mode }, { branch }),
