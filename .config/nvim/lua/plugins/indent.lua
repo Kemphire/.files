@@ -29,6 +29,10 @@ return {
 
 			-- Which character to use for drawing scope indicator
 			symbol = "╎",
+			draw = {
+				-- to disable any animation
+				animation = require("mini.indentscope").gen_animation.none(),
+			},
 		})
 
 		autocmd({ "Filetype" }, {
