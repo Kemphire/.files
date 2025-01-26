@@ -1,7 +1,7 @@
 if status is-interactive
 	function fish_greeting
 		# colorscript -r
-		pokemon-colorscripts -r -b 
+		pokemon-colorscripts -bsr
 	end
 end
 
