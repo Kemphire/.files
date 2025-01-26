@@ -136,6 +136,7 @@ return {
 		"TechnicalDC/cmp-abl",
 		"rafamadriz/friendly-snippets",
 	},
+	event = "BufWinEnter",
 	version = "v0.*",
 	opts = {
 		keymap = {

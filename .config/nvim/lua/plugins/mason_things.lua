@@ -1,5 +1,5 @@
-	return {
-		{
+return {
+	{
 		"williamboman/mason.nvim",
 		event = "VeryLazy",
 		config = function()
@@ -17,7 +17,6 @@
 	{
 		"williamboman/mason-lspconfig.nvim",
 		event = "VeryLazy",
-		lazy = true,
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
@@ -37,4 +36,4 @@
 			})
 		end,
 	},
-	}
+}
