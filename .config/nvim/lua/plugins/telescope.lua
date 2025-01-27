@@ -99,10 +99,11 @@ return {
 		require("fzf-lua").setup({
 			winopts = {
 				backdrop = 70,
+				border = "rounded",
 			},
 			fzf_colors = true,
 			defaults = {
-				file_icons = false,
+				file_icons = true,
 			},
 		})
 	end,
