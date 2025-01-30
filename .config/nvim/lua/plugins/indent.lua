@@ -9,6 +9,7 @@ return {
 			"norg",
 			"trouble",
 			"help",
+			"snacks_dashboard",
 		}
 		require("mini.indentscope").setup({
 			-- Options which control scope computation
