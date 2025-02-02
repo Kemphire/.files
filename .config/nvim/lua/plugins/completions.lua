@@ -135,6 +135,7 @@ return {
 		"saghen/blink.compat",
 		"TechnicalDC/cmp-abl",
 		"L3MON4D3/LuaSnip",
+		"rafamadriz/friendly-snippets",
 	},
 	event = "BufWinEnter",
 	version = "v0.*",
