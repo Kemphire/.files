@@ -134,7 +134,7 @@ return {
 	dependencies = {
 		"saghen/blink.compat",
 		"TechnicalDC/cmp-abl",
-		"rafamadriz/friendly-snippets",
+		"L3MON4D3/LuaSnip",
 	},
 	event = "BufWinEnter",
 	version = "v0.*",
@@ -200,6 +200,8 @@ return {
 			end,
 		},
 		sources = {
+			default = { "lsp", "path", "snippets", "buffer" },
+
 			providers = {
 				abl = {
 					name = "abl", -- IMPORTANT: use the same name as you would for nvim-cmp
@@ -216,7 +218,6 @@ return {
 					-- },
 				},
 			},
-			default = { "lsp", "path", "snippets", "buffer" },
 			cmdline = function()
 				local type = vim.fn.getcmdtype()
 				if type == "/" or type == "?" then

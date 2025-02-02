@@ -278,6 +278,7 @@ return {
 				jinja_lsp = {
 					filetypes = { "html", "htmldjango" },
 				},
+				ts_ls = {},
 				pyright = {
 					settings = {
 						pyright = {

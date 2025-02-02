@@ -33,6 +33,7 @@ return {
 				c = { "clang-format" },
 				cpp = { "clang-format" },
 				javascript = { "biome" },
+				typescript = { "biome" },
 				jsonc = { "biome" },
 				bash = { "beautysh" },
 				tex = { "texfmt" },
