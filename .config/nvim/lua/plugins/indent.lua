@@ -11,6 +11,7 @@ return {
 			"help",
 			"snacks_dashboard",
 			"man",
+			"lazy",
 		}
 		require("mini.indentscope").setup({
 			-- Options which control scope computation
