@@ -28,7 +28,7 @@ return {
 				lua = { "stylua" },
 				python = { "ruff_format", "ruff_fix" },
 				go = { "goimports", "gofmt" },
-				html = { "htmlbeautifier", "djlint" },
+				html = { "htmlbeautifier", "biome" },
 				c = { "clang-format" },
 				cpp = { "clang-format" },
 				javascript = { "biome" },
