@@ -2,6 +2,7 @@
 local util = require("lspconfig.util")
 
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+	desc = "change the file type of html file to htmldjango if manage.py is found",
 	pattern = { "*.html" },
 
 	callback = function()
