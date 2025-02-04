@@ -10,6 +10,7 @@ return {
 			"trouble",
 			"help",
 			"snacks_dashboard",
+			"man",
 		}
 		require("mini.indentscope").setup({
 			-- Options which control scope computation
@@ -37,8 +38,9 @@ return {
 		})
 
 		autocmd({ "Filetype" }, {
-			pattern = exclude_filetype,
-			callback = function(args)
+			desc = "Disable indentoscope for certain ft's",
+			pattern = table.concat(exclude_filetype, ","),
+			callback = function()
 				vim.b.miniindentscope_disable = true
 			end,
 		})

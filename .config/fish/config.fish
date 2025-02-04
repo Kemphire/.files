@@ -69,3 +69,7 @@ test -r '/home/hitmonlee/.opam/opam-init/init.fish' && source '/home/hitmonlee/.
 
 # flutter path set
 set -x PATH /home/hitmonlee/sdk_flutter/flutter/bin/ $PATH
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
