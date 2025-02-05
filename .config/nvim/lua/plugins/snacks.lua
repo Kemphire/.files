@@ -1,6 +1,7 @@
 return {
 	"folke/snacks.nvim",
 	priority = 1000,
+	dependencies = { "nvim-tree/nvim-web-devicons" },
 	lazy = false,
 	---@type snacks.Config
 	opts = {
@@ -25,7 +26,7 @@ return {
 			},
 		},
 		notifier = {
-			enabled = false,
+			enabled = true,
 			timeout = 3000,
 		},
 		explorer = {
@@ -34,6 +35,7 @@ return {
 				cycle = false,
 			},
 		},
+		toggle = { enabled = true },
 		-- indent = {
 		-- 	enabled = true,
 		-- 	priority = 1,
@@ -85,7 +87,7 @@ return {
 		picker = {
 			icons = {
 				files = {
-					enabled = false,
+					enabled = true,
 				},
 			},
 			sources = { explorer = { layout = { position = "right" } } },
