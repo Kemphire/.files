@@ -88,6 +88,7 @@ return {
 					enabled = false,
 				},
 			},
+			sources = { explorer = { layout = { position = "right" } } },
 		},
 	},
 	keys = {
