@@ -51,3 +51,6 @@ map({ "n" }, "<leader>rn", vim.lsp.buf.rename, { desc = "lsp code rename", norem
 -- )
 -- map("n", "<leader>def", builtins.lsp_definitions, { noremap = true, silent = true, desc = "Fzf lsp viewer" })
 -- map("n", "<leader>fca", builtins.lsp_code_actions, { noremap = true, silent = true, desc = "Fzf lsp code actions" })
+--
+
+-- snacks picker config

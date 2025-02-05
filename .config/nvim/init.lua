@@ -12,8 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 require("vim-option")
 require("settings")
-require("keymaps")
 require("autocmd")
+require("keymaps")
 require("lazy").setup("plugins", {
 	ui = {
 		-- a number <1 is a percentage., >1 is a fixed size
