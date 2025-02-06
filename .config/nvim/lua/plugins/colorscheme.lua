@@ -78,38 +78,47 @@ return {
 		-- },
 	},
 	{
-		"scottmckendry/cyberdream.nvim",
-		-- lazy = false,
-		-- event = "VeryLazy",
-		-- priority = 1000,
+		-- "scottmckendry/cyberdream.nvim",
+		-- -- lazy = false,
+		-- -- event = "VeryLazy",
+		-- -- priority = 1000,
+		-- init = function()
+		-- 	require("cyberdream").setup({
+		-- 		transparent = true,
+		-- 		italic_comments = true,
+		--
+		-- 		-- Modern borderless telescope theme - also applies to fzf-lua
+		-- 		borderless_telescope = true,
+		--
+		-- 		-- Set terminal colors used in `:terminal`
+		-- 		terminal_colors = true,
+		-- 		cache = true,
+		--
+		-- 		theme = {
+		-- 			variant = "auto",
+		-- 			colors = {},
+		-- 			highlights = {},
+		-- 		},
+		-- 		-- Disable or enable colorscheme extensions
+		-- 		extensions = {
+		-- 			telescope = true,
+		-- 			cmp = true,
+		-- 			lazy = true,
+		-- 			treesitter = true,
+		-- 			fzflua = true,
+		-- 			alpha = true,
+		-- 		},
+		-- 	})
+		-- 	vim.cmd("colorscheme cyberdream")
+		-- end,
+	},
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
 		init = function()
-			require("cyberdream").setup({
-				transparent = true,
-				italic_comments = true,
-
-				-- Modern borderless telescope theme - also applies to fzf-lua
-				borderless_telescope = true,
-
-				-- Set terminal colors used in `:terminal`
-				terminal_colors = true,
-				cache = true,
-
-				theme = {
-					variant = "auto",
-					colors = {},
-					highlights = {},
-				},
-				-- Disable or enable colorscheme extensions
-				extensions = {
-					telescope = true,
-					cmp = true,
-					lazy = true,
-					treesitter = true,
-					fzflua = true,
-					alpha = true,
-				},
-			})
-			vim.cmd("colorscheme cyberdream")
+			vim.cmd("colorscheme tokyonight-night")
 		end,
 	},
 }
