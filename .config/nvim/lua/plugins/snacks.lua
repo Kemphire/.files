@@ -91,6 +91,16 @@ return {
 				},
 			},
 			sources = { explorer = { layout = { position = "right" } } },
+			layout = {
+				preset = "ivy",
+				cycle = false,
+			},
+			debug = {
+				scores = false,
+			},
+			matcher = {
+				frequency = true,
+			},
 		},
 	},
 	keys = {
@@ -259,9 +269,9 @@ return {
 			desc = "Select colorschemes",
 		},
 		{
-			"<leader>nvc",
+			"<leader>pwc",
 			function()
-				Snacks.picker.commands()
+				Snacks.picker.keymaps()
 			end,
 			desc = "Fuzzy search, Neovim commands",
 		},
