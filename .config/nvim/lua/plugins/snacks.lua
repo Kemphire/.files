@@ -214,7 +214,7 @@ return {
 		{
 			"<leader>es",
 			function()
-				Snacks.explorer()
+				Snacks.explorer.open(opts)
 			end,
 			desc = "Open snacks explorer",
 		},
