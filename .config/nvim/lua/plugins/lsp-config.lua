@@ -261,9 +261,9 @@ return {
 				zls = {},
 				emmet_language_server = {},
 				taplo = {},
-				dartls = {
-					cmd = { "dart", "language-server", "--protocol=lsp" },
-				},
+				-- dartls = {
+				-- 	cmd = { "dart", "language-server", "--protocol=lsp" },
+				-- },
 				gopls = {
 					settings = {
 						gopls = {
@@ -294,6 +294,7 @@ return {
 						config.settings.python.pythonPath = get_python_path(config.root_dir)
 					end,
 				},
+				svelte = {},
 			}
 
 			-- Setup all servers with capabilities
