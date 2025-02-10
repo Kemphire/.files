@@ -100,6 +100,8 @@ return {
 			},
 			matcher = {
 				frequency = true,
+				fuzzy = true,
+				smartcase = true,
 			},
 		},
 	},
