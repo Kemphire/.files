@@ -1,4 +1,4 @@
--- vim.cmd([[colorscheme everforest-nvim]])
+vim.cmd([[colorscheme retrobox]])
 vim.cmd("set nohlsearch")
 vim.opt.number = true
 vim.opt.relativenumber = true
