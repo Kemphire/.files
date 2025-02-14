@@ -371,7 +371,7 @@ layer_effects "waybar" blur enable; shadows disable
 
 # exec gsettings set org.gnome.desktop.interface cursor-size 30
 # exec gsettings set org.gnome.desktop.interface cursor-theme apple_cursor
-# seat seat0 xcursor_theme default 20
+seat seat0 xcursor_theme Banana 40
 
 # for clipboard management
 exec_always --no-startup-id clipse -listen
