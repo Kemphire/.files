@@ -84,6 +84,7 @@ return {
 					and vim.bo[buf].buftype ~= "terminal"
 			end,
 		},
+		image = { enabled = true },
 		picker = {
 			icons = {
 				files = {
