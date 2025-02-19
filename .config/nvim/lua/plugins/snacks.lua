@@ -25,6 +25,9 @@ return {
 				{ icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
 			},
 		},
+		{
+			spell = "fish",
+		},
 		notifier = {
 			enabled = true,
 			timeout = 3000,
