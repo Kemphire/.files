@@ -7,7 +7,10 @@ end
 
 # for starship prompt
 starship init fish | source
+
+# homebrew
 eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
 
 set -gx LDFLAGS "-L/home/linuxbrew/.linuxbrew/opt/postgresql@16/lib"
 set -gx CPPFLAGS "-I/home/linuxbrew/.linuxbrew/opt/postgresql@16/include"
