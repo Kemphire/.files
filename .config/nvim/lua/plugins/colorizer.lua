@@ -14,6 +14,7 @@ return {
 				"json",
 				"conf",
 				"lua",
+				"dart",
 			},
 			user_default_options = {
 				RGB = true,
