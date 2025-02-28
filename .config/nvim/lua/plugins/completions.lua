@@ -234,25 +234,25 @@ return {
 			-- 	-- markdown = { 'snippets', 'dictionary', 'buffer', 'path' }
 			-- },
 		},
-		cmdline = {
-			sources = {
-
-				cmdline = function()
-					local type = vim.fn.getcmdtype()
-					if type == "/" or type == "?" then
-						return { "buffer" }
-					end
-					if type == ":" then
-						return { "cmdline" }
-					end
-					return {}
-				end,
-				per_filetype = {
-					progress = { "snippets", "buffer", "abl" },
-					-- markdown = { 'snippets', 'dictionary', 'buffer', 'path' }
-				},
-			},
-		},
+		-- cmdline = {
+		-- 	sources = {
+		--
+		-- 		cmdline = function()
+		-- 			local type = vim.fn.getcmdtype()
+		-- 			if type == "/" or type == "?" then
+		-- 				return { "buffer" }
+		-- 			end
+		-- 			if type == ":" then
+		-- 				return { "cmdline" }
+		-- 			end
+		-- 			return {}
+		-- 		end,
+		-- 		per_filetype = {
+		-- 			progress = { "snippets", "buffer", "abl" },
+		-- 			-- markdown = { 'snippets', 'dictionary', 'buffer', 'path' }
+		-- 		},
+		-- 	},
+		-- },
 		signature = {
 			enabled = true,
 			window = {
