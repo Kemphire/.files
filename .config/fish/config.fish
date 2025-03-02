@@ -76,3 +76,8 @@ set -x PATH /home/hitmonlee/sdk_flutter/flutter/bin/ $PATH
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# sway env variables
+# if test -f ~/.profile
+#     source ~/.profile
+# end

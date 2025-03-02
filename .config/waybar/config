@@ -8,17 +8,17 @@
     // Choose the order of the modules
     "modules-left": [
 				"custom/vivaldi",
-        "sway/workspaces",
-        "sway/mode",
-        "sway/scratchpad",
         "custom/media",
 				"keyboard-state",
+        "pulseaudio",
+        "sway/window",
     ],
     "modules-center": [
-        "sway/window"
+        "sway/workspaces",
+        "sway/scratchpad",
+        "sway/mode",
     ],
     "modules-right": [
-        "pulseaudio",
         "network",
         "memory",
 				"backlight",
@@ -187,8 +187,7 @@
 			"format":"{}  ",
 			"tooltip": true,
 			"tooltip-format":"Open Browser",
-			"on-click":"sleep 0.1 && vivaldi --password-store=kwallet6",
-			"on-click-right":"sleep 0.1 && flatpak run io.github.zen_browser.zen",
+			"on-click":"sleep 0.1 && zen_browser",
 		},
     "custom/media": {
         "format": "{icon} {}",

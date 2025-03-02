@@ -6,6 +6,9 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 # exec waybar
 exec waybar
 
+# kdeconnect
+exec kdeconnectd
+
 # start notification daemon
 # exec --no-startup-id mako
 exec --no-startup-id swaync
@@ -40,7 +43,7 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu exec fuzzel 
+set $menu exec rofi -show drun -show-icons -terminal kitty
 # it is set in config.d/50-openSUSE.conf
 
 ### Output configuration
@@ -98,6 +101,14 @@ input "10182:480:DELL09EC:00_27C6:01E0" {
 	natural_scroll disabled
 	middle_emulation enabled
 }
+
+input "10182:480:DELL09EC:00_27C6:01E0_Touchpad" {
+	dwt enabled
+	tap enabled
+	natural_scroll disabled
+	middle_emulation enabled
+}
+
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
@@ -298,7 +309,7 @@ mode $exit {
 
 bindsym --to-code $mod+x mode $exit
 
-bindsym $mod+o exec swaymsg exit
+# bindsym $mod+o exec swaymsg exit
 
 gaps inner 10
 gaps outer 2
