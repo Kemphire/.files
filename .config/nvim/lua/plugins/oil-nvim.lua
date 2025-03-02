@@ -68,6 +68,7 @@ return {
 	{
 		"echasnovski/mini.files",
 		version = false,
+		lazy = true,
 		dependencies = { "echasnovski/mini.icons" },
 		keys = {
 			{
