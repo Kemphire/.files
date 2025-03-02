@@ -65,4 +65,27 @@ return {
 	-- 		floating_window_scaling_factor = 0.6,
 	-- 	},
 	-- },
+	{
+		"echasnovski/mini.files",
+		version = false,
+		dependencies = { "echasnovski/mini.icons" },
+		keys = {
+			{
+				"--",
+				function()
+					require("mini.files").open()
+				end,
+				desc = "MiniFiles Open",
+			},
+		},
+		opts = {
+			windows = { preview = true, width_preview = 50 },
+		},
+		config = function()
+			require("mini.icons").setup() -- Initialize mini.icons
+			require("mini.files").setup({
+				windows = { preview = true, width_preview = 50 },
+			})
+		end,
+	},
 }

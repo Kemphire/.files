@@ -32,6 +32,7 @@ map({ "n" }, "<C-s>", "<cmd>wa<CR>", { desc = "Save all the opened buffer", nore
 
 map({ "n" }, "<leader>rn", vim.lsp.buf.rename, { desc = "lsp code rename", noremap = true, silent = true })
 
+
 --- keymaps for Fzf-lua
 -- local builtins = require("fzf-lua")
 -- map("n", "<leader>ff", builtins.files, { noremap = true, silent = true, desc = "Fzf file searching" })

@@ -33,7 +33,7 @@ return {
 			timeout = 3000,
 		},
 		explorer = {
-			enabled = true,
+			enabled = false,
 			layout = {
 				cycle = false,
 			},
@@ -245,13 +245,13 @@ return {
 			desc = "Prev Reference",
 			mode = { "n", "t" },
 		},
-		{
-			"<leader>es",
-			function()
-				Snacks.explorer.open(opts)
-			end,
-			desc = "Open snacks explorer",
-		},
+		-- {
+		-- 	"<leader>es",
+		-- 	function()
+		-- 		Snacks.explorer.open(opts)
+		-- 	end,
+		-- 	desc = "Open snacks explorer",
+		-- },
 		-- snacks picker keymaps
 		{
 			"<leader>ff",
