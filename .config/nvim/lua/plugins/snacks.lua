@@ -25,8 +25,8 @@ return {
 				{ icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
 			},
 		},
-		{
-			spell = "fish",
+		termianl = {
+			shell = "/usr/bin/fish",
 		},
 		notifier = {
 			enabled = true,
@@ -39,28 +39,26 @@ return {
 			},
 		},
 		toggle = { enabled = true },
-		-- indent = {
-		-- 	enabled = true,
-		-- 	priority = 1,
-		-- 	char = "|",
-		-- 	only_scope = true,
-		-- 	only_current = true,
-		-- },
-		-- scope = {
-		-- 	only_current = true,
-		-- },
-		-- animate = {
-		-- 	enabled = vim.fn.has("nvim-0.10") == 1,
-		-- 	style = "out",
-		-- 	easing = "linear",
-		-- 	duration = {
-		-- 		step = 10, -- ms per step
-		-- 		total = 300, -- maximum duration
-		-- 	},
-		-- },
-		-- chunk = {
-		-- 	only_current = true,
-		-- },
+		indent = {
+			enabled = true,
+			priority = 1,
+			char = "|",
+			only_scope = true,
+			only_current = true,
+			hl = "SnacksIndent8",
+		},
+		animate = {
+			enabled = vim.fn.has("nvim-0.10") == 1,
+			style = "out",
+			easing = "linear",
+			duration = {
+				step = 10, -- ms per step
+				total = 300, -- maximum duration
+			},
+		},
+		chunk = {
+			only_current = true,
+		},
 		quickfile = { enabled = true },
 		statuscolumn = { enabled = true },
 		words = { enabled = true },
