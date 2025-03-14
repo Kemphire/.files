@@ -77,6 +77,11 @@ set -x PATH /home/hitmonlee/sdk_flutter/flutter/bin/ $PATH
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
+# dart and flutter related
+
+set --export DART_BIN "$HOME/.pub-cache/bin"
+set --export PATH $DART_BIN $PATH
+
 # sway env variables
 # if test -f ~/.profile
 #     source ~/.profile
