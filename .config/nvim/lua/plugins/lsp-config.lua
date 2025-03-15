@@ -256,6 +256,17 @@ return {
 				html = {},
 				cssls = {},
 				clangd = {},
+				-- ccls = {
+				-- 	flags = {
+				-- 		debounce_text_changes = 150,
+				-- 	},
+				-- 	cmd = { "/usr/bin/ccls" },
+				-- 	init_options = {
+				-- 		clang = {
+				-- 			extraARGS = { "--stdc++17" },
+				-- 		},
+				-- 	},
+				-- },
 				quick_lint_js = {},
 				texlab = {},
 				zls = {},

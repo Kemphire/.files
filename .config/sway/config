@@ -348,7 +348,8 @@ default_floating_border pixel 2
 default_border pixel 2
 
 # for bringing colors for active windows
-set $bg            #cc353d
+# set $bg            #cc353d
+set $bg            #000000
 set $bg-inactive   #1d2021
 set $bg-urgent     #000000
 set $text          #eeeeec
@@ -362,7 +363,8 @@ client.urgent           $bg-urgent    $bg-urgent   $text          $bar $bar
 
 # swayfx specific configs
 shadows enable 
-shadow_color #f96c3f
+shadow_color #f9fc3f
+shadow_inactive_color $bg
 smart_corner_radius enable
 corner_radius 5
 shadow_blur_radius 3
