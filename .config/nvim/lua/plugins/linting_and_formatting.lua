@@ -38,6 +38,7 @@ return {
 				tex = { "texfmt" },
 				css = { "biome" },
 				htmldjango = { "djlint" },
+				sql = { "sleek" },
 			},
 			format_on_save = {
 				timeout_ms = 2000,
