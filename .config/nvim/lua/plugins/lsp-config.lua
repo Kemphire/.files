@@ -306,6 +306,7 @@ return {
 					end,
 				},
 				svelte = {},
+				jdtls = {},
 			}
 
 			-- Setup all servers with capabilities
