@@ -1,5 +1,19 @@
-[plugin]
-deps = [{ use = "Reledia/miller", commit = "40e0265" }, { use = "Reledia/glow", commit = "4e016fa" }, { use = "AnirudhG07/nbpreview", commit = "52a14b3" }]
+[[plugin.deps]]
+use = "Reledia/miller"
+rev = ""
+hash = "2d6d77583162aaf0a599e7a3091b5878"
 
-[flavor]
-deps = [{ use = "dangooddd/kanagawa", commit = "b32f205" }]
+[[plugin.deps]]
+use = "Reledia/glow"
+rev = ""
+hash = "c505e670f2a378a84931f553d9b2e398"
+
+[[plugin.deps]]
+use = "AnirudhG07/nbpreview"
+rev = ""
+hash = "ec558646fb09a3f73cd00c2b76451a1c"
+
+[[flavor.deps]]
+use = "dangooddd/kanagawa"
+rev = ""
+hash = "ccc8e162ce8e9dedae7ae45ba07bb94a"
