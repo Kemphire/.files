@@ -307,6 +307,7 @@ return {
 				},
 				svelte = {},
 				jdtls = {},
+				yamlls = {},
 			}
 
 			-- Setup all servers with capabilities
