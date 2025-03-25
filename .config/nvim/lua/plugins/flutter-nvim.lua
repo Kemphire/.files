@@ -21,6 +21,7 @@ return {
 	},
 	{
 		"wa11breaker/flutter-bloc.nvim",
+		ft = "dart",
 		dependencies = {
 			"nvimtools/none-ls.nvim", -- Required for code actions
 		},
@@ -29,5 +30,8 @@ return {
 			use_sealed_classes = false,
 			enable_code_actions = true,
 		},
+		config = function()
+			require("flutter-bloc").setup()
+		end,
 	},
 }

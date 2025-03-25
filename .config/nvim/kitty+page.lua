@@ -3,7 +3,6 @@ local setup = function()
 	local cur_line = vim.fn.getenv("CURSOR_LINE")
 	local cur_column = vim.fn.getenv("CURSOR_COLUMN")
 	vim.opt.encoding = "utf-8"
-	vim.opt.clipboard = "unnamed"
 	vim.opt.compatible = false
 	vim.opt.number = false
 	vim.opt.relativenumber = false
@@ -13,6 +12,7 @@ local setup = function()
 	vim.opt.laststatus = 0
 	vim.opt.showcmd = false
 	vim.opt.scrollback = 1000
+	vim.opt.clipboard = "unnamedplus"
 	local term_buf = vim.api.nvim_create_buf(true, false)
 	local term_io = vim.api.nvim_open_term(term_buf, {})
 	vim.api.nvim_buf_set_keymap(term_buf, "n", "q", "<Cmd>q<CR>", {})
