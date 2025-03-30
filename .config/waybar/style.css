@@ -8,14 +8,17 @@
 }
 
 window#waybar {
-	background-color: rgba(40, 42, 54, 0.4);
-	color: #f8f8f2;
+	/* background-color: rgba(40, 42, 54, 0.4); */
+	background-color: rgba(40, 42, 54, 1.0);
+	/* color: #f8f8f2; */
+	color: #ffffff;
 	transition-property: background-color;
 	transition-duration: 0.5s;
 }
 
 window#waybar.hidden {
-	opacity: 0.2;
+	/* opacity: 0.2; */
+	opacity: 0;
 }
 
 #workspaces button {

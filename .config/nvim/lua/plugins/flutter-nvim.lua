@@ -8,15 +8,15 @@ return {
 			"stevearc/dressing.nvim", -- optional for vim.ui.select
 		},
 		config = function()
-			require("flutter-tools").setup({
-				lsp = {
-					color = {
-						enabled = true,
-						background = true,
-						foreground = true,
-					},
-				},
-			}) -- use defaults
+			-- require("flutter-tools").setup({
+			-- 	lsp = {
+			-- 		color = {
+			-- 			enabled = true,
+			-- 			background = true,
+			-- 			foreground = true,
+			-- 		},
+			-- 	},
+			-- }) -- use defaults
 		end,
 	},
 	{
