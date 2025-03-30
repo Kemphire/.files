@@ -6,16 +6,12 @@ if status is-interactive
 end
 
 # for starship prompt
-starship init fish | source
+# starship init fish | source
 
 # homebrew
-eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+# uninstalled this evn polluter
+# eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
-
-set -gx LDFLAGS "-L/home/linuxbrew/.linuxbrew/opt/postgresql@16/lib"
-set -gx CPPFLAGS "-I/home/linuxbrew/.linuxbrew/opt/postgresql@16/include"
-
-set -gx PKG_CONFIG_PATH "/home/linuxbrew/.linuxbrew/opt/postgresql@16/lib/pkgconfig"
 
 set -x PATH $PATH /home/$USER/go/bin
 
@@ -60,14 +56,6 @@ set -x MANPAGER "nvim +Man!"
 zoxide init fish | source
 
 
-
-# BEGIN opam configuration
-# This is useful if you're using opam as it adds:
-#   - the correct directories to the PATH
-#   - auto-completion for the opam binary
-# This section can be safely removed at any time if needed.
-test -r '/home/hitmonlee/.opam/opam-init/init.fish' && source '/home/hitmonlee/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
-# END opam configuration
 
 
 # flutter path set
