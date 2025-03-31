@@ -33,10 +33,10 @@ if [[ $(pidof swaybg) ]]; then
 fi
 
 ## Wofi Command
-wofi_command="wofi --show dmenu \
+wofi_command="rofi -show filebrowser \
 			--prompt choose...
-			--conf $CONFIG --style $STYLE --color $COLORS \
-			--width=$WIDTH% --height=$HEIGHT% \
+			# --conf $CONFIG --style $STYLE --color $COLORS \
+			# --width=$WIDTH% --height=$HEIGHT% \
 			--cache-file=/dev/null \
 			--hide-scroll --no-actions \
 			--matching=fuzzy"
