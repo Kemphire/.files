@@ -2,3 +2,4 @@
 
 # Ignore all JSON files under .config/clipse/ and its subdirectories
 .config/clipse/**/*.json
+.config/fish/fish_variables

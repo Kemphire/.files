@@ -44,10 +44,12 @@ set $explorer dolphin
 
 # Your preferred terminal emulator
 set $term kitty 
+set $term2 foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu exec rofi -show drun -show-icons -terminal kitty
+# set $menu exec rofi -show drun -show-icons -terminal kitty
+set $menu exec $term2 -app-id=launcher -e /usr/bin/sway-launcher-desktop
 # it is set in config.d/50-openSUSE.conf
 
 ### Output configuration
@@ -404,19 +406,21 @@ set $width 824
 set $height 652
 
 # for setting clipse as a menu in kitty and calling it with a hotkey
-for_window [app_id="clipse"] floating enable, resize set $width $height
-
+for_window [app_id="clipse"] floating enable,sticky enable, border pixel 5, resize set $width $height
+# size for sway-launcher-desktop
 bindsym --no-repeat $mod+V exec kitty --class clipse -e 'clipse'
 
 # for setting nmtui as a menu in kitty and calling it with a hotkey
-for_window [app_id="nmtui"] floating enable, resize set $width $height
+for_window [app_id="nmtui"] floating enable,sticky enable, border pixel 5, resize set $width $height
 
 bindsym --no-repeat $mod+Shift+n exec kitty --class nmtui -e nmtui
 
 # for setting blutuith as a menu in kitty and calling it with a hotkey
-for_window [app_id="bluetuith"] floating enable, resize set $width $height
+for_window [app_id="bluetuith"] floating enable,sticky enable,border pixel 10, resize set $width $height
 
 bindsym --no-repeat $mod+Shift+b exec foot --app-id=bluetuith -e bluetuith
+
+for_window [app_id="launcher"] floating enable, sticky enable, resize set 30 ppt 60 ppt, border pixel 10
 
 # for using avizo as a multimedia manager
 
