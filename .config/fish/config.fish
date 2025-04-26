@@ -22,6 +22,8 @@ set -gx WLR_NO_HARDWARE_CURSORS 1
 set -gx python3 /usr/bin/python3
 
 set -x ZYPP_MEDIANETWORK 1
+set -x ZYPP_CURL2 1 
+set -x ZYPP_PCK_PRELOAD 1
 
 function fish_default_key_bindings
 	fish_vi_key_bindings
