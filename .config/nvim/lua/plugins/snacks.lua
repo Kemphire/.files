@@ -120,7 +120,7 @@ return {
 					enabled = true,
 				},
 			},
-			sources = { explorer = { layout = { position = "right" } } },
+			sources = { explorer = { layout = { layout = { position = "right" } } } },
 			layout = {
 				preset = "ivy",
 				cycle = false,
