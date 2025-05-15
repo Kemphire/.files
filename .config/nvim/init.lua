@@ -12,7 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 require("settings")
 require("autocmd")
-require("keymaps")
 require("vim-option")
 require("lazy").setup("plugins", {
 	ui = {
@@ -51,3 +50,15 @@ require("lazy").setup("plugins", {
 		},
 	},
 })
+
+local function setup_lsp()
+	local lsp_configs = {}
+
+	for _, f in pairs(vim.api.nvim_get_runtime_file("lsp/*.lua", true)) do
+		local server_name = vim.fn.fnamemodify(f, ":t:r")
+		table.insert(lsp_configs, server_name)
+	end
+
+	vim.lsp.enable(lsp_configs)
+end
+require("keymaps")

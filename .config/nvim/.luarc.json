@@ -9,5 +9,6 @@
   "workspace.library": [
     "$VIMRUNTIME",
     "${3rd}/luv/library"
-  ]
+  ],
+    "completion.autoRequire": false
 }

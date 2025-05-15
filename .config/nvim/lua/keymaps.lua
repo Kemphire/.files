@@ -9,24 +9,25 @@ end, { desc = "Reveal inlay hints", noremap = true, silent = true })
 map("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
 
 -- for easier motion in bufferline
-map(
-	{ "n" },
-	"<leader>h",
-	"<cmd>BufferLineCyclePrev<CR>",
-	{ desc = "Go's ahead in bufferline tabs", noremap = true, silent = true }
-)
-map(
-	{ "n" },
-	"<leader>l",
-	"<cmd>BufferLineCycleNext<CR>",
-	{ desc = "swap buffer in backwards direction", noremap = true, silent = true }
-)
-map(
-	{ "n" },
-	"<leader>ch",
-	"<cmd>BufferLinePick<CR>",
-	{ desc = "Toggle picker for bufferlines", noremap = true, silent = true }
-)
+-- map(
+-- 	{ "n" },
+-- 	"<leader>h",
+-- 	"<cmd>BufferLineCyclePrev<CR>",
+-- 	{ desc = "Go's ahead in bufferline tabs", noremap = true, silent = true }
+-- )
+-- map(
+-- 	{ "n" },
+-- 	"<leader>l",
+-- 	"<cmd>BufferLineCycleNext<CR>",
+-- 	{ desc = "swap buffer in backwards direction", noremap = true, silent = true }
+-- )
+
+-- map(
+-- 	{ "n" },
+-- 	"<leader>ch",
+-- 	"<cmd>BufferLinePick<CR>",
+-- 	{ desc = "Toggle picker for bufferlines", noremap = true, silent = true }
+-- )
 
 map({ "n" }, "<C-s>", "<cmd>wa<CR>", { desc = "Save all the opened buffer", noremap = true, silent = true })
 
@@ -54,3 +55,12 @@ map({ "n" }, "<leader>rn", vim.lsp.buf.rename, { desc = "lsp code rename", norem
 --
 
 -- snacks picker config
+map("n", "<leader>d", function()
+	vim.lsp.buf.hover()
+end, { desc = "LSP definition popup" })
+map({ "v", "n" }, "<leader>gd", function()
+	vim.lsp.buf.definition()
+end, { desc = "LSP go to definition" })
+map({ "v", "n" }, "<leader>ca", function()
+	vim.lsp.buf.code_action()
+end, { desc = "LSP code action" })

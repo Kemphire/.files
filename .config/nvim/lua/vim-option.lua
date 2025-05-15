@@ -22,4 +22,4 @@ vim.opt.shell = "fish"
 
 -- virtual text/line for errors
 -- will not work untill shifted to 0.11
-vim.diagnostic.config({ virtual_linns = { current_line = true } })
+vim.diagnostic.config({ virtual_text = true })
