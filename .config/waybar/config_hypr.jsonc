@@ -1,6 +1,6 @@
 {
 	"position": "top",
-	"position": "bottom", // Waybar position (top|bottom|left|right)
+	// "position": "bottom", // Waybar position (top|bottom|left|right)
 	"height": 10, // Waybar height (to be removed for auto height)
 	"spacing": 3, // Gaps between modules (4px)
 	"modules-left": ["media", "custom/vivaldi", "hyprland/workspaces"],
@@ -12,6 +12,7 @@
 		"battery",
 		"memory",
 		"clock",
+		"media",
 		"custom/power"
 	],
 	"clock": {

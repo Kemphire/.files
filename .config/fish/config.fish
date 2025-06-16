@@ -58,7 +58,8 @@ set -x MANPAGER "nvim +Man!"
 zoxide init fish | source
 
 
-
+# xv6 cross compiler
+set -gx PATH $HOME/opt/cross/bin $PATH
 
 # flutter path set
 set -x PATH /home/hitmonlee/sdk_flutter/flutter/bin/ $PATH
