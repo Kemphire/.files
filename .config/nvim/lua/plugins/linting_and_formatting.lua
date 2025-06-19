@@ -39,7 +39,7 @@ return {
 				css = { "biome" },
 				htmldjango = { "djlint" },
 				sql = { "sleek" },
-				nix = { "alejandra " },
+				nix = { "alejandra" },
 			},
 			format_on_save = {
 				timeout_ms = 2000,
@@ -48,6 +48,11 @@ return {
 			formatters = {
 				texfmt = {
 					command = "$HOME/.cargo/bin/tex-fmt",
+				},
+				alejandra = {
+					command = "alejandra",
+					args = { "-" },
+					stdin = true,
 				},
 			},
 		})

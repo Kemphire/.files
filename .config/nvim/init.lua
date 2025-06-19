@@ -61,4 +61,7 @@ local function setup_lsp()
 
 	vim.lsp.enable(lsp_configs)
 end
+
+setup_lsp()
+
 require("keymaps")
