@@ -45,9 +45,9 @@ return {
 		},
 	},
 
-	before_init = function(_, config)
-		config.settings.python.pythonPath = get_python_path(config.root_dir)
-	end,
+	-- before_init = function(_, config)
+	-- 	config.settings.python.pythonPath = get_python_path(config.root_dir)
+	-- end,
 
 	single_file_support = true,
 }
