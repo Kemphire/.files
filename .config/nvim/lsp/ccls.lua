@@ -31,5 +31,6 @@ return {
 	root_markers = {
 		"Makefile",
 		"compile_commands.json",
+		"flake.nix",
 	},
 }
