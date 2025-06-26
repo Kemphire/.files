@@ -7,6 +7,12 @@ return {
 		-- VimTeX configuration goes here, e.g.
 		vim.g.vimtex_view_method = "sioyek"
 		vim.g.vimtex_compiler_method = "latexmk"
+
+		-- vim.g.vimtex_compiler_tectonic = {
+		-- 	options = {
+		-- 		'--synctex',
+		-- 	}
+		-- };
 		vim.g.vimtex_quickfix_open_on_warning = 0
 		vim.g.tex_conceal = ""
 	end,
