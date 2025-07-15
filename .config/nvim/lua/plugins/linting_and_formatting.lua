@@ -35,7 +35,7 @@ return {
 				typescript = { "biome" },
 				jsonc = { "biome" },
 				bash = { "beautysh" },
-				tex = { "texfmt" },
+				tex = { "tex-fmt" },
 				css = { "biome" },
 				htmldjango = { "djlint" },
 				sql = { "sleek" },
