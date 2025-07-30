@@ -8,7 +8,6 @@ vim.cmd("set ruler")
 
 -- for popmenu transparency
 vim.opt.pumblend = 30
-vim.o.shell = "/usr/bin/bash"
 
 -- vim.g.loaded_netrwPlugin = false
 -- vim.g.loaded_netrw = false

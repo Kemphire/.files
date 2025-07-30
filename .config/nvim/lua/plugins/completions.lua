@@ -156,7 +156,7 @@ return {
 			},
 		},
 		appearance = {
-			nerd_font_variant = "normal",
+			nerd_font_variant = "FiraCode Nerd Font",
 			kind_icons = {
 				Class = "",
 				Color = "",
@@ -298,9 +298,10 @@ return {
 			},
 			-- Displays a preview of the selected item on the current line
 			ghost_text = {
-				enabled = false,
+				enabled = true,
 			},
 		},
+		fuzzy = { implementation = "prefer_rust_with_warning" }
 	},
 	-- allows extending the providers array elsewhere in your config
 	-- without having to redefine it
