@@ -25,7 +25,7 @@ return {
 			},
 		})
 		vim.api.nvim_create_autocmd("FileType", {
-			pattern = {"htmldjango", "html"},
+			pattern = { "htmldjango", "html" },
 			callback = function()
 				require("autoclose").setup({
 					keys = {

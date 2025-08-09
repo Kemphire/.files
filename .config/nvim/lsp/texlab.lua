@@ -8,12 +8,14 @@ return {
 		texlab = {
 			bibtexFormatter = "texlab",
 			build = {
-				args = { "-X",
+				args = {
+					"-X",
 					"compile",
 					"%f",
 					"--synctex",
 					"--keep-logs",
-					"--keep-intermediates" },
+					"--keep-intermediates",
+				},
 				executable = "tectonic",
 				forwardSearchAfter = false,
 				onSave = false,

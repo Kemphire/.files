@@ -301,7 +301,7 @@ return {
 				enabled = true,
 			},
 		},
-		fuzzy = { implementation = "prefer_rust_with_warning" }
+		fuzzy = { implementation = "prefer_rust_with_warning" },
 	},
 	-- allows extending the providers array elsewhere in your config
 	-- without having to redefine it
