@@ -40,6 +40,7 @@ return {
 				htmldjango = { "djlint" },
 				sql = { "sleek" },
 				nix = { "alejandra" },
+				rust = {"rustfmt"},
 			},
 			format_on_save = {
 				timeout_ms = 2000,
