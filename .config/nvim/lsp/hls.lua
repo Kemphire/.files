@@ -1,6 +1,6 @@
 return {
 	cmd = { "haskell-language-server-wrapper", "--lsp" },
-	filetypes = { "haskell", "lhaskell" },
+	filetypes = { "haskell", "lhaskell", "cabal" },
 	settings = {
 		haskell = {
 			cabalFormattingProvider = "cabalfmt",

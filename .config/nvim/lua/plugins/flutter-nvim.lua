@@ -10,13 +10,17 @@ return {
 		opts = {},
 		config = function()
 			require("flutter-tools").setup({
-				-- 	lsp = {
-				-- 		color = {
-				-- 			enabled = true,
-				-- 			background = true,
-				-- 			foreground = true,
-				-- 		},
-				-- 	},
+				lsp = {
+					color = {
+						enabled = true,
+						background = true,
+						foreground = true,
+					},
+				},
+				fvm = true,
+				widget_guides = {
+					enabled = false,
+				},
 			}) -- use defaults
 		end,
 	},
