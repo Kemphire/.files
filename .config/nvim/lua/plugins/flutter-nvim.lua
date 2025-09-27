@@ -14,7 +14,7 @@ return {
 					color = {
 						enabled = true,
 						background = true,
-						foreground = true,
+						-- foreground = true,
 					},
 				},
 				fvm = true,

@@ -15,4 +15,5 @@ return {
 		"vue",
 	},
 	workspace_required = true,
+	root_marker = { "package.json" },
 }
