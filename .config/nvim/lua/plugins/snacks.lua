@@ -213,13 +213,6 @@ return {
 			desc = "Toggle Terminal",
 		},
 		{
-			"<c-_>",
-			function()
-				Snacks.terminal()
-			end,
-			desc = "which_key_ignore",
-		},
-		{
 			"]]",
 			function()
 				Snacks.words.jump(vim.v.count1)
@@ -243,69 +236,69 @@ return {
 			desc = "Open snacks explorer",
 		},
 		-- snacks picker keymaps
-		{
-			"<leader>ff",
-			function()
-				Snacks.picker.files()
-			end,
-			desc = "Find files, using snacks picker",
-		},
-		{
-			"<leader>pc",
-			function()
-				Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
-			end,
-			desc = "Open config files",
-		},
-		{
-			"<leader>fb",
-			function()
-				Snacks.picker.buffers()
-			end,
-			desc = "Search buffers, using snacks picker",
-		},
-		{
-			"<leader>fh",
-			function()
-				Snacks.picker.help()
-			end,
-			desc = "Search help tags",
-		},
-		{
-			"<leader>fg",
-			function()
-				Snacks.picker.grep()
-			end,
-			desc = "Grep string in files",
-		},
-		{
-			"<leader>pws",
-			function()
-				Snacks.picker.grep_word()
-			end,
-			desc = "Grep current word",
-		},
-		{
-			"<leader>th",
-			function()
-				Snacks.picker.colorschemes()
-			end,
-			desc = "Select colorschemes",
-		},
-		{
-			"<leader>pwc",
-			function()
-				Snacks.picker.keymaps()
-			end,
-			desc = "Fuzzy search, Neovim commands",
-		},
-		{
-			"<leader>mn",
-			function()
-				Snacks.picker.man()
-			end,
-			desc = "Man pages, search",
-		},
+		-- {
+		-- 	"<leader>ff",
+		-- 	function()
+		-- 		Snacks.picker.smart()
+		-- 	end,
+		-- 	desc = "Find files, using snacks picker",
+		-- },
+		-- {
+		-- 	"<leader>pc",
+		-- 	function()
+		-- 		Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
+		-- 	end,
+		-- 	desc = "Open config files",
+		-- },
+		-- {
+		-- 	"<leader>fb",
+		-- 	function()
+		-- 		Snacks.picker.buffers()
+		-- 	end,
+		-- 	desc = "Search buffers, using snacks picker",
+		-- },
+		-- {
+		-- 	"<leader>fh",
+		-- 	function()
+		-- 		Snacks.picker.help()
+		-- 	end,
+		-- 	desc = "Search help tags",
+		-- },
+		-- {
+		-- 	"<leader>fg",
+		-- 	function()
+		-- 		Snacks.picker.grep()
+		-- 	end,
+		-- 	desc = "Grep string in files",
+		-- },
+		-- {
+		-- 	"<leader>pws",
+		-- 	function()
+		-- 		Snacks.picker.grep_word()
+		-- 	end,
+		-- 	desc = "Grep current word",
+		-- },
+		-- {
+		-- 	"<leader>th",
+		-- 	function()
+		-- 		Snacks.picker.colorschemes()
+		-- 	end,
+		-- 	desc = "Select colorschemes",
+		-- },
+		-- {
+		-- 	"<leader>pwc",
+		-- 	function()
+		-- 		Snacks.picker.keymaps()
+		-- 	end,
+		-- 	desc = "Fuzzy search, Neovim commands",
+		-- },
+		-- {
+		-- 	"<leader>mn",
+		-- 	function()
+		-- 		Snacks.picker.man()
+		-- 	end,
+		-- 	desc = "Man pages, search",
+		-- },
 		{
 			"<leader>N",
 			desc = "Neovim News",
